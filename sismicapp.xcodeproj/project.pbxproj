@@ -7,14 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D1A414C1D0B4B170018B664 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1A414B1D0B4B170018B664 /* HomeController.swift */; };
 		0D5D713A1CECD12F000125FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5D71391CECD12F000125FC /* AppDelegate.swift */; };
-		0D5D713C1CECD12F000125FC /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5D713B1CECD12F000125FC /* FirstViewController.swift */; };
-		0D5D713E1CECD12F000125FC /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5D713D1CECD12F000125FC /* SecondViewController.swift */; };
 		0D5D71411CECD12F000125FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D5D713F1CECD12F000125FC /* Main.storyboard */; };
 		0D5D71431CECD12F000125FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D5D71421CECD12F000125FC /* Assets.xcassets */; };
 		0D5D71461CECD12F000125FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D5D71441CECD12F000125FC /* LaunchScreen.storyboard */; };
 		0D5D71511CECD12F000125FC /* sismicappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5D71501CECD12F000125FC /* sismicappTests.swift */; };
 		0D5D715C1CECD12F000125FC /* sismicappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5D715B1CECD12F000125FC /* sismicappUITests.swift */; };
+		0D81D2C31D0DB2C400BE8A04 /* RedButtonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D81D2C21D0DB2C400BE8A04 /* RedButtonController.swift */; };
+		0D81D2C51D0DB2F900BE8A04 /* EmergencyNumbersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D81D2C41D0DB2F900BE8A04 /* EmergencyNumbersController.swift */; };
+		0D81D2C71D0DB39400BE8A04 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D81D2C61D0DB39400BE8A04 /* SettingsController.swift */; };
+		0D81D2C91D0DB45800BE8A04 /* NotificationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D81D2C81D0DB45800BE8A04 /* NotificationsController.swift */; };
+		0D81D2CB1D0DB4E300BE8A04 /* FeedbackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D81D2CA1D0DB4E300BE8A04 /* FeedbackController.swift */; };
+		0D81D2CD1D0DB57300BE8A04 /* SeismController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D81D2CC1D0DB57300BE8A04 /* SeismController.swift */; };
+		0D81D2D11D0DB60F00BE8A04 /* InformationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D81D2D01D0DB60F00BE8A04 /* InformationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D1A414B1D0B4B170018B664 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		0D5D71361CECD12E000125FC /* sismicapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sismicapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D5D71391CECD12F000125FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0D5D713B1CECD12F000125FC /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		0D5D713D1CECD12F000125FC /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		0D5D71401CECD12F000125FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0D5D71421CECD12F000125FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D5D71451CECD12F000125FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +54,13 @@
 		0D5D71571CECD12F000125FC /* sismicappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sismicappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D5D715B1CECD12F000125FC /* sismicappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sismicappUITests.swift; sourceTree = "<group>"; };
 		0D5D715D1CECD12F000125FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D81D2C21D0DB2C400BE8A04 /* RedButtonController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedButtonController.swift; sourceTree = "<group>"; };
+		0D81D2C41D0DB2F900BE8A04 /* EmergencyNumbersController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmergencyNumbersController.swift; sourceTree = "<group>"; };
+		0D81D2C61D0DB39400BE8A04 /* SettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		0D81D2C81D0DB45800BE8A04 /* NotificationsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsController.swift; sourceTree = "<group>"; };
+		0D81D2CA1D0DB4E300BE8A04 /* FeedbackController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackController.swift; sourceTree = "<group>"; };
+		0D81D2CC1D0DB57300BE8A04 /* SeismController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeismController.swift; sourceTree = "<group>"; };
+		0D81D2D01D0DB60F00BE8A04 /* InformationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +112,14 @@
 			isa = PBXGroup;
 			children = (
 				0D5D71391CECD12F000125FC /* AppDelegate.swift */,
-				0D5D713B1CECD12F000125FC /* FirstViewController.swift */,
-				0D5D713D1CECD12F000125FC /* SecondViewController.swift */,
+				0D81D2C41D0DB2F900BE8A04 /* EmergencyNumbersController.swift */,
+				0D81D2CA1D0DB4E300BE8A04 /* FeedbackController.swift */,
+				0D1A414B1D0B4B170018B664 /* HomeController.swift */,
+				0D81D2D01D0DB60F00BE8A04 /* InformationController.swift */,
+				0D81D2C81D0DB45800BE8A04 /* NotificationsController.swift */,
+				0D81D2C21D0DB2C400BE8A04 /* RedButtonController.swift */,
+				0D81D2CC1D0DB57300BE8A04 /* SeismController.swift */,
+				0D81D2C61D0DB39400BE8A04 /* SettingsController.swift */,
 				0D5D713F1CECD12F000125FC /* Main.storyboard */,
 				0D5D71421CECD12F000125FC /* Assets.xcassets */,
 				0D5D71441CECD12F000125FC /* LaunchScreen.storyboard */,
@@ -259,9 +277,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D5D713E1CECD12F000125FC /* SecondViewController.swift in Sources */,
+				0D81D2CB1D0DB4E300BE8A04 /* FeedbackController.swift in Sources */,
+				0D81D2C91D0DB45800BE8A04 /* NotificationsController.swift in Sources */,
+				0D81D2C51D0DB2F900BE8A04 /* EmergencyNumbersController.swift in Sources */,
+				0D81D2C71D0DB39400BE8A04 /* SettingsController.swift in Sources */,
+				0D1A414C1D0B4B170018B664 /* HomeController.swift in Sources */,
+				0D81D2CD1D0DB57300BE8A04 /* SeismController.swift in Sources */,
+				0D81D2D11D0DB60F00BE8A04 /* InformationController.swift in Sources */,
+				0D81D2C31D0DB2C400BE8A04 /* RedButtonController.swift in Sources */,
 				0D5D713A1CECD12F000125FC /* AppDelegate.swift in Sources */,
-				0D5D713C1CECD12F000125FC /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +510,7 @@
 				0D5D71621CECD12F000125FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0D5D71631CECD12F000125FC /* Build configuration list for PBXNativeTarget "sismicappTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +519,7 @@
 				0D5D71651CECD12F000125FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0D5D71661CECD12F000125FC /* Build configuration list for PBXNativeTarget "sismicappUITests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +528,7 @@
 				0D5D71681CECD12F000125FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
