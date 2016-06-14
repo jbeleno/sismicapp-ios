@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Home Controller-->
+        <!--Inicio-->
         <scene sceneID="s8S-MK-mr5">
             <objects>
                 <viewController id="FlY-dK-Hew" customClass="HomeController" customModule="sismicapp" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,9 +16,9 @@
                     <view key="view" contentMode="scaleToFill" id="rbs-4D-dQW">
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="RpR-Lu-yIU"/>
+                    <navigationItem key="navigationItem" title="Inicio" id="RpR-Lu-yIU"/>
                     <connections>
                         <segue destination="IsC-Lc-nsV" kind="show" identifier="home_seism_segue" id="rBp-6p-Jl8"/>
                         <segue destination="AyW-BW-ERI" kind="show" identifier="home_information_segue" id="Z5x-TQ-i9G"/>
@@ -39,14 +39,14 @@
                     <view key="view" contentMode="scaleToFill" id="v7p-bD-uth">
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EQe-99-FZp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2626" y="-370"/>
         </scene>
-        <!--Red Button Controller-->
+        <!--Reportar-->
         <scene sceneID="1iz-cg-P7I">
             <objects>
                 <viewController id="7EV-Mu-vPs" customClass="RedButtonController" customModule="sismicapp" customModuleProvider="target" sceneMemberID="viewController">
@@ -57,9 +57,9 @@
                     <view key="view" contentMode="scaleToFill" id="q4n-XA-nla">
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="9Za-g7-K74"/>
+                    <navigationItem key="navigationItem" title="Reportar" id="9Za-g7-K74"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ts1-24-Ct1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -91,7 +91,7 @@
             </objects>
             <point key="canvasLocation" x="-702" y="505"/>
         </scene>
-        <!--Notifications Controller-->
+        <!--Notificaciones-->
         <scene sceneID="0iL-0t-1Z2">
             <objects>
                 <viewController id="5X4-jD-i5i" customClass="NotificationsController" customModule="sismicapp" customModuleProvider="target" sceneMemberID="viewController">
@@ -102,9 +102,9 @@
                     <view key="view" contentMode="scaleToFill" id="W1S-7C-bYC">
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="P66-0K-gSi"/>
+                    <navigationItem key="navigationItem" title="Notificaciones" id="P66-0K-gSi"/>
                     <connections>
                         <segue destination="IsC-Lc-nsV" kind="show" identifier="notifications_seism_segue" id="Ggf-iP-W5F"/>
                         <segue destination="AyW-BW-ERI" kind="show" identifier="notifications_information_segue" id="ZHz-7c-8EN"/>
@@ -125,7 +125,7 @@
                     <view key="view" contentMode="scaleToFill" id="Ql9-UY-efV">
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sjN-0q-9QH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -143,7 +143,7 @@
                     <view key="view" contentMode="scaleToFill" id="E3k-73-OZX">
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="32n-Cy-eiU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -170,7 +170,7 @@
             </objects>
             <point key="canvasLocation" x="307" y="-1144"/>
         </scene>
-        <!--Emergency Numbers Controller-->
+        <!--Números de emergencias-->
         <scene sceneID="pr3-ka-lm6">
             <objects>
                 <viewController id="Juq-lP-ocr" customClass="EmergencyNumbersController" customModule="sismicapp" customModuleProvider="target" sceneMemberID="viewController">
@@ -181,9 +181,92 @@
                     <view key="view" contentMode="scaleToFill" id="RFu-rb-ip5">
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="58" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UCd-dU-r9s">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexTrackingBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="phoneCell" rowHeight="52" id="YrW-mv-3NU" customClass="PhoneNumbersCell" customModule="sismicapp">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="52"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YrW-mv-3NU" id="yUV-ag-gIy">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="52"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bomberos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D4R-5I-Z3e">
+                                                    <rect key="frame" x="56" y="8" width="536" height="16"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="16" id="v9J-LK-A2E"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                    <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jpN-lX-vXd">
+                                                    <rect key="frame" x="56" y="51" width="544" height="1"/>
+                                                    <color key="backgroundColor" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="RTN-sS-N2w"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="119" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hg2-EF-xNa">
+                                                    <rect key="frame" x="56" y="29" width="536" height="12"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="12" id="1hI-kR-VJk"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="0.53333333333333333" green="0.53333333333333333" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone_circle" translatesAutoresizingMaskIntoConstraints="NO" id="Rch-cu-tyM">
+                                                    <rect key="frame" x="8" y="8" width="36" height="34"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="36" id="8Va-ca-7KF"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="jpN-lX-vXd" firstAttribute="leading" secondItem="yUV-ag-gIy" secondAttribute="leading" constant="56" id="1Fr-27-8jt"/>
+                                                <constraint firstAttribute="trailing" secondItem="Hg2-EF-xNa" secondAttribute="trailing" constant="8" id="DqU-Vv-wpw"/>
+                                                <constraint firstItem="D4R-5I-Z3e" firstAttribute="top" secondItem="yUV-ag-gIy" secondAttribute="top" constant="8" id="EvI-Nr-6fz"/>
+                                                <constraint firstItem="Hg2-EF-xNa" firstAttribute="leading" secondItem="Rch-cu-tyM" secondAttribute="trailing" constant="12" id="WqV-Ws-t19"/>
+                                                <constraint firstItem="Hg2-EF-xNa" firstAttribute="top" secondItem="D4R-5I-Z3e" secondAttribute="bottom" constant="5" id="YHb-wV-wbU"/>
+                                                <constraint firstAttribute="bottom" secondItem="Rch-cu-tyM" secondAttribute="bottom" constant="10" id="ekN-VR-Mcx"/>
+                                                <constraint firstItem="Rch-cu-tyM" firstAttribute="top" secondItem="yUV-ag-gIy" secondAttribute="top" constant="8" id="gFx-Vk-vG4"/>
+                                                <constraint firstAttribute="trailing" secondItem="D4R-5I-Z3e" secondAttribute="trailing" constant="8" id="ghQ-w3-7va"/>
+                                                <constraint firstAttribute="trailing" secondItem="jpN-lX-vXd" secondAttribute="trailing" id="hFm-mv-mWg"/>
+                                                <constraint firstItem="Rch-cu-tyM" firstAttribute="leading" secondItem="yUV-ag-gIy" secondAttribute="leading" constant="8" id="i51-7s-mhf"/>
+                                                <constraint firstItem="D4R-5I-Z3e" firstAttribute="leading" secondItem="Rch-cu-tyM" secondAttribute="trailing" constant="12" id="kZv-bb-O1T"/>
+                                                <constraint firstAttribute="bottom" secondItem="jpN-lX-vXd" secondAttribute="bottom" id="ppw-rJ-DqU"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="name" destination="D4R-5I-Z3e" id="6jS-7i-VPE"/>
+                                            <outlet property="number" destination="Hg2-EF-xNa" id="BYD-Vc-Cn3"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Juq-lP-ocr" id="nac-yK-wv5"/>
+                                    <outlet property="delegate" destination="Juq-lP-ocr" id="DNX-2K-nQY"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="rxk-NK-Opl" firstAttribute="top" secondItem="UCd-dU-r9s" secondAttribute="bottom" id="9qo-Kc-V4U"/>
+                            <constraint firstItem="UCd-dU-r9s" firstAttribute="top" secondItem="n3T-Zb-xOa" secondAttribute="bottom" id="PdI-Qq-u4n"/>
+                            <constraint firstItem="UCd-dU-r9s" firstAttribute="leading" secondItem="RFu-rb-ip5" secondAttribute="leading" id="jrb-N2-bOu"/>
+                            <constraint firstAttribute="trailing" secondItem="UCd-dU-r9s" secondAttribute="trailing" id="oy1-OD-kdw"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="gpW-g5-bRK"/>
+                    <navigationItem key="navigationItem" title="Números de emergencias" id="gpW-g5-bRK"/>
+                    <connections>
+                        <outlet property="tableView" destination="UCd-dU-r9s" id="rN8-pE-CzE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J1l-5B-lv3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -229,7 +312,7 @@
             </objects>
             <point key="canvasLocation" x="307" y="1278"/>
         </scene>
-        <!--Settings Controller-->
+        <!--Configuraciones-->
         <scene sceneID="xR8-4Q-eey">
             <objects>
                 <viewController id="7tS-7o-fTA" customClass="SettingsController" customModule="sismicapp" customModuleProvider="target" sceneMemberID="viewController">
@@ -240,9 +323,9 @@
                     <view key="view" contentMode="scaleToFill" id="ocZ-4e-2GR">
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ASI-Me-khT"/>
+                    <navigationItem key="navigationItem" title="Configuraciones" id="ASI-Me-khT"/>
                     <connections>
                         <segue destination="X5b-fY-83F" kind="show" identifier="feedback_segue" id="uLV-0S-mYz"/>
                     </connections>
@@ -297,11 +380,12 @@
         <image name="circle" width="25" height="25"/>
         <image name="home" width="25" height="25"/>
         <image name="phone" width="25" height="25"/>
+        <image name="phone_circle" width="32" height="32"/>
         <image name="settings" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Z5x-TQ-i9G"/>
-        <segue reference="rBp-6p-Jl8"/>
+        <segue reference="ZHz-7c-8EN"/>
+        <segue reference="Ggf-iP-W5F"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

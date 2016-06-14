@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0D1A414C1D0B4B170018B664 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1A414B1D0B4B170018B664 /* HomeController.swift */; };
+		0D1C6BF11D1066F800E7E756 /* PhoneNumbersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1C6BF01D1066F800E7E756 /* PhoneNumbersCell.swift */; };
 		0D5D713A1CECD12F000125FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5D71391CECD12F000125FC /* AppDelegate.swift */; };
 		0D5D71411CECD12F000125FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D5D713F1CECD12F000125FC /* Main.storyboard */; };
 		0D5D71431CECD12F000125FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D5D71421CECD12F000125FC /* Assets.xcassets */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		0D1A414B1D0B4B170018B664 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		0D1C6BF01D1066F800E7E756 /* PhoneNumbersCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhoneNumbersCell.swift; path = Cells/PhoneNumbersCell.swift; sourceTree = "<group>"; };
 		0D5D71361CECD12E000125FC /* sismicapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sismicapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D5D71391CECD12F000125FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0D5D71401CECD12F000125FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -88,6 +90,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D1C6BEF1D1066C800E7E756 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				0D1C6BF01D1066F800E7E756 /* PhoneNumbersCell.swift */,
+			);
+			name = cells;
+			sourceTree = "<group>";
+		};
 		0D5D712D1CECD12E000125FC = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +121,7 @@
 		0D5D71381CECD12F000125FC /* sismicapp */ = {
 			isa = PBXGroup;
 			children = (
+				0D1C6BEF1D1066C800E7E756 /* cells */,
 				0D5D71391CECD12F000125FC /* AppDelegate.swift */,
 				0D81D2C41D0DB2F900BE8A04 /* EmergencyNumbersController.swift */,
 				0D81D2CA1D0DB4E300BE8A04 /* FeedbackController.swift */,
@@ -280,6 +291,7 @@
 				0D81D2CB1D0DB4E300BE8A04 /* FeedbackController.swift in Sources */,
 				0D81D2C91D0DB45800BE8A04 /* NotificationsController.swift in Sources */,
 				0D81D2C51D0DB2F900BE8A04 /* EmergencyNumbersController.swift in Sources */,
+				0D1C6BF11D1066F800E7E756 /* PhoneNumbersCell.swift in Sources */,
 				0D81D2C71D0DB39400BE8A04 /* SettingsController.swift in Sources */,
 				0D1A414C1D0B4B170018B664 /* HomeController.swift in Sources */,
 				0D81D2CD1D0DB57300BE8A04 /* SeismController.swift in Sources */,
