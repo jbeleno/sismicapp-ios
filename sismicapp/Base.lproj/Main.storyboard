@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Inicio-->
+        <!--Actividad sismica en Colombia-->
         <scene sceneID="s8S-MK-mr5">
             <objects>
                 <viewController id="FlY-dK-Hew" customClass="HomeController" customModule="sismicapp" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Inicio" id="RpR-Lu-yIU"/>
+                    <navigationItem key="navigationItem" title="Actividad sismica en Colombia" id="RpR-Lu-yIU"/>
                     <connections>
                         <segue destination="IsC-Lc-nsV" kind="show" identifier="home_seism_segue" id="rBp-6p-Jl8"/>
                         <segue destination="AyW-BW-ERI" kind="show" identifier="home_information_segue" id="Z5x-TQ-i9G"/>
@@ -384,8 +384,8 @@
         <image name="settings" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ZHz-7c-8EN"/>
-        <segue reference="Ggf-iP-W5F"/>
+        <segue reference="rBp-6p-Jl8"/>
+        <segue reference="Z5x-TQ-i9G"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
