@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		097104D83F338981EC0DB9B8 /* Pods_sismicappTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCF15D45F2F780B42094CC90 /* Pods_sismicappTests.framework */; };
+		0D0624171D2C2B260051FDF0 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0624161D2C2B260051FDF0 /* Device.swift */; };
 		0D4A762F1D2B3CF300C32907 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4A762E1D2B3CF300C32907 /* Text.swift */; };
 		0D4A76311D2B3D8800C32907 /* UIViewController+presentError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4A76301D2B3D8800C32907 /* UIViewController+presentError.swift */; };
 		0D5D713A1CECD12F000125FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5D71391CECD12F000125FC /* AppDelegate.swift */; };
@@ -52,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D0624161D2C2B260051FDF0 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Device.swift; path = Models/Device.swift; sourceTree = "<group>"; };
 		0D4A762E1D2B3CF300C32907 /* Text.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Text.swift; path = Helpers/Text.swift; sourceTree = "<group>"; };
 		0D4A76301D2B3D8800C32907 /* UIViewController+presentError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+presentError.swift"; path = "View/UIViewController+presentError.swift"; sourceTree = "<group>"; };
 		0D5D71361CECD12E000125FC /* sismicapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sismicapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -206,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				0DE18D8F1D26F34D00EF39E2 /* EmergencyService.swift */,
+				0D0624161D2C2B260051FDF0 /* Device.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -525,6 +528,7 @@
 				0DE18D881D26DA9C00EF39E2 /* SettingsController.swift in Sources */,
 				0D4A762F1D2B3CF300C32907 /* Text.swift in Sources */,
 				0DE18D901D26F34D00EF39E2 /* EmergencyService.swift in Sources */,
+				0D0624171D2C2B260051FDF0 /* Device.swift in Sources */,
 				0DFD00021D28783100DD0111 /* SismicappAPIService.swift in Sources */,
 				0DE18D871D26DA9C00EF39E2 /* SeismController.swift in Sources */,
 				0DE18D811D26DA9C00EF39E2 /* EmergencyNumbersController.swift in Sources */,

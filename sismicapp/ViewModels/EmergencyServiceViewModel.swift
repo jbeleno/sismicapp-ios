@@ -47,9 +47,7 @@ final class EmergencyServicesViewModel {
     // straightforward emergency services
     private func fillCellsData(from emergency_services: [EmergencyService])-> [EmergencyServiceModel] {
         
-        var emergencyServiceModels: [EmergencyServiceModel]
-        
-        emergencyServiceModels = []
+        var emergencyServiceModels: [EmergencyServiceModel] = []
         
         for es in emergency_services {
             emergencyServiceModels.append(convertInEmergencyServiceModel(from: es))
