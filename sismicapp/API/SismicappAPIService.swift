@@ -47,7 +47,7 @@ class SismicappAPIService {
     
     
     // ************************* <DEVICE> *****************************
-    func registerDevice(withModel model: String, withOSVersion version: String) -> Observable<Device> {
+    /*func registerDevice(withModel model: String, withOSVersion version: String) -> Observable<String> {
         
         let params: [String: AnyObject] = [
             "platform": "iOS",
@@ -60,40 +60,48 @@ class SismicappAPIService {
                     .rx_JSON()
                     .map(JSON.init)
                     .flatMap {
-                        json -> Observable<Device> in
-                        guard let device = Device(json: json) else {
+                        json -> Observable<String> in
+                        guard let device_token = json["device_token"].string else {
                             return Observable.error
                         }
                         
-                        return Observable.just(device)
+                        return Observable.just(device_token)
                     }
     }
     
-    func updateDeviceLocation( withDevice device_token: integer,
-                                 withLatitude latitude: String,
-                               withLongitude longitude: String) -> Observable<DeviceLocation> {
+    func registerSession( withDevice device_token: String,
+                            withLatitude latitude: String,
+                          withLongitude longitude: String,
+                                    withCity city: String,
+                                withRegion region: String,
+                              withCountry country: String) -> Observable<Bool> {
         
         let params: [String: AnyObject] = [
             "device_token": device_token,
             "latitude": latitude,
-            "longitude": longitude
+            "longitude": longitude,
+            "city": city,
+            "region": region,
+            "country": country
         ]
         
         return request(.POST, ResourcePath.DeviceNew, parameters: params)
-            .rx_JSON()
-            .map(JSON.init)
-            .flatMap {
-                json -> Observable<DeviceLocation> in
-                guard let device_location = DeviceLocation(json: json) else {
-                    return Observable.error
-                }
+                .rx_JSON()
+                .map(JSON.init)
+                .flatMap {
+                    json -> Observable<Bool> in
+                    guard let status = true
+                    where json["status"].string == "OK"
+                    else {
+                        return Observable.error
+                    }
                 
-                return Observable.just(device_location)
-        }
+                    return Observable.just(status)
+                }
     }
     
     func updateDevicePushKey( withDevice device_token: String,
-                                  withPushKey pushKey: String) -> Observable<DeviceLocation> {
+                                  withPushKey pushKey: String) -> Observable<Bool> {
         
         let params: [String: AnyObject] = [
             "device_token": device_token,
@@ -101,17 +109,41 @@ class SismicappAPIService {
         ]
         
         return request(.POST, ResourcePath.DeviceNew, parameters: params)
-            .rx_JSON()
-            .map(JSON.init)
-            .flatMap {
-                json -> Observable<DeviceLocation> in
-                guard let device_location = DeviceLocation(json: json) else {
-                    return Observable.error
+                .rx_JSON()
+                .map(JSON.init)
+                .flatMap {
+                    json -> Observable<Bool> in
+                    guard let status = true
+                    where json["status"].string == "OK"
+                    else {
+                        return Observable.error
+                    }
+                    
+                    return Observable.just(status)
                 }
-                
-                return Observable.just(device_location)
-        }
-    }
+    }*/
     
     // ************************ </DEVICE> *****************************
+    
+    // ----------------------------------------------------------------
+    
+    // ******************** <EMERGENCY SERVICE> ***********************
+    
+    
+    func getEmergencyNumbers() -> [EmergencyService]{
+        
+        let emergencyServicesData: [EmergencyService] = [
+            EmergencyService(json: JSON(["name": "Bomberos", "number": "119"]))!,
+            EmergencyService(json: JSON(["name": "Cruz Roja", "number": "132"]))!,
+            EmergencyService(json: JSON(["name": "Defensa Civil", "number": "144"]))!,
+            EmergencyService(json: JSON(["name": "Emergencias", "number": "123"]))!,
+            EmergencyService(json: JSON(["name": "Policía", "number": "112"]))!
+        ]
+        
+        return emergencyServicesData
+    }
+    
+    
+    
+    // ******************* </EMERGENCY SERVICE> ***********************
 }

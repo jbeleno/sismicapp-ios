@@ -7,12 +7,20 @@
 //
 
 import Foundation
+import SwiftyJSON
 
-class EmergencyService {
-    var name: String
-    var number: String
+struct EmergencyService {
+    let name: String
+    let number: String
     
-    init(name: String, number: String) {
+    init?(json: JSON) {
+        guard let
+            name = json["name"].string,
+            number = json["number"].string
+        else {
+            return nil
+        }
+        
         self.name = name
         self.number = number
     }

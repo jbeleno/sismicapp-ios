@@ -6,24 +6,65 @@
 //  Copyright © 2016 Juan Beleño Díaz. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-class EmergencyServiceViewModel {
-    private var es_instance: EmergencyService
+final class EmergencyServicesViewModel {
     
-    var nameText: String {
-        return es_instance.name
+    //MARK: - Dependecies
+    
+    private let sismicappService: SismicappAPIService
+    
+    
+    //MARK: - Model
+    
+    private let emergencyServices: [EmergencyService]
+    
+    ///Data for a table in the format of array of Emergency Services
+    var cellData: [EmergencyServiceModel]
+    
+    
+    //MARK: - Set up
+    
+    init(sismicappService: SismicappAPIService) {
+        
+        //Initialise dependencies
+        self.sismicappService = sismicappService
+        
+        
+        // Suscribe emergency services data to this variable
+        self.emergencyServices = sismicappService.getEmergencyNumbers()
+        
+        // Fill cellData
+        self.cellData = []
+        self.cellData = fillCellsData(from: emergencyServices)
+        
     }
     
-    var numberText: String {
-        return es_instance.number
+    
+    //MARK: - Private methods
+    
+    ///Parses the emergency services data into an array of pretty 
+    // straightforward emergency services
+    private func fillCellsData(from emergency_services: [EmergencyService])-> [EmergencyServiceModel] {
+        
+        var emergencyServiceModels: [EmergencyServiceModel]
+        
+        emergencyServiceModels = []
+        
+        for es in emergency_services {
+            emergencyServiceModels.append(convertInEmergencyServiceModel(from: es))
+        }
+        
+        return emergencyServiceModels
+        
     }
     
-    var numberURL: NSURL? {
-        return NSURL(string: es_instance.number)
+    private func convertInEmergencyServiceModel(from es: EmergencyService)-> EmergencyServiceModel {
+        return EmergencyServiceModel(
+            name: es.name,
+            number: es.number,
+            numberURL: NSURL(string: "tel://" + es.number)!
+        )
     }
     
-    init(es_instance: EmergencyService) {
-        self.es_instance = es_instance
-    }
 }

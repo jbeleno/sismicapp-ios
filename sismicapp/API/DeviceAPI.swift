@@ -6,7 +6,7 @@
 //  Copyright © 2016 Juan Beleño Díaz. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 // This code was originally created in http://stackoverflow.com/a/26962452
 public extension UIDevice {
