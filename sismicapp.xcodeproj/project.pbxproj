@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		097104D83F338981EC0DB9B8 /* Pods_sismicappTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCF15D45F2F780B42094CC90 /* Pods_sismicappTests.framework */; };
 		0D0624171D2C2B260051FDF0 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0624161D2C2B260051FDF0 /* Device.swift */; };
+		0D249A4B1D2D703E00855178 /* DeviceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D249A4A1D2D703E00855178 /* DeviceViewModel.swift */; };
+		0D249A4D1D2D764400855178 /* IpInfoAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D249A4C1D2D764400855178 /* IpInfoAPIService.swift */; };
+		0D249A4F1D2D814E00855178 /* DeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D249A4E1D2D814E00855178 /* DeviceInfo.swift */; };
 		0D4A762F1D2B3CF300C32907 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4A762E1D2B3CF300C32907 /* Text.swift */; };
 		0D4A76311D2B3D8800C32907 /* UIViewController+presentError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4A76301D2B3D8800C32907 /* UIViewController+presentError.swift */; };
 		0D5D713A1CECD12F000125FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5D71391CECD12F000125FC /* AppDelegate.swift */; };
@@ -30,7 +33,6 @@
 		0DE18D901D26F34D00EF39E2 /* EmergencyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE18D8F1D26F34D00EF39E2 /* EmergencyService.swift */; };
 		0DE18D921D26F44300EF39E2 /* EmergencyServiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE18D911D26F44300EF39E2 /* EmergencyServiceViewModel.swift */; };
 		0DFD00021D28783100DD0111 /* SismicappAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFD00011D28783100DD0111 /* SismicappAPIService.swift */; };
-		0DFD00041D28803A00DD0111 /* DeviceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFD00031D28803A00DD0111 /* DeviceAPI.swift */; };
 		752E1FC15F6D17FF8376021D /* Pods_sismicappUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FB392F73E5C10E15E5F171E /* Pods_sismicappUITests.framework */; };
 		91F4EF35E865819C2891C4FC /* Pods_sismicapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9FC05189ED07997468F9EC4 /* Pods_sismicapp.framework */; };
 /* End PBXBuildFile section */
@@ -54,6 +56,9 @@
 
 /* Begin PBXFileReference section */
 		0D0624161D2C2B260051FDF0 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Device.swift; path = Models/Device.swift; sourceTree = "<group>"; };
+		0D249A4A1D2D703E00855178 /* DeviceViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeviceViewModel.swift; path = ViewModels/DeviceViewModel.swift; sourceTree = "<group>"; };
+		0D249A4C1D2D764400855178 /* IpInfoAPIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IpInfoAPIService.swift; path = API/IpInfoAPIService.swift; sourceTree = "<group>"; };
+		0D249A4E1D2D814E00855178 /* DeviceInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeviceInfo.swift; path = Helpers/DeviceInfo.swift; sourceTree = "<group>"; };
 		0D4A762E1D2B3CF300C32907 /* Text.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Text.swift; path = Helpers/Text.swift; sourceTree = "<group>"; };
 		0D4A76301D2B3D8800C32907 /* UIViewController+presentError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+presentError.swift"; path = "View/UIViewController+presentError.swift"; sourceTree = "<group>"; };
 		0D5D71361CECD12E000125FC /* sismicapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sismicapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,7 +86,6 @@
 		0DE18D8F1D26F34D00EF39E2 /* EmergencyService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmergencyService.swift; path = Models/EmergencyService.swift; sourceTree = "<group>"; };
 		0DE18D911D26F44300EF39E2 /* EmergencyServiceViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmergencyServiceViewModel.swift; path = ViewModels/EmergencyServiceViewModel.swift; sourceTree = "<group>"; };
 		0DFD00011D28783100DD0111 /* SismicappAPIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SismicappAPIService.swift; path = API/SismicappAPIService.swift; sourceTree = "<group>"; };
-		0DFD00031D28803A00DD0111 /* DeviceAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeviceAPI.swift; path = API/DeviceAPI.swift; sourceTree = "<group>"; };
 		2D02A47CED6CB8748CC43D0D /* Pods-sismicappTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sismicappTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-sismicappTests/Pods-sismicappTests.release.xcconfig"; sourceTree = "<group>"; };
 		5E5811D27C4B35AEE9382125 /* Pods-sismicappUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sismicappUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-sismicappUITests/Pods-sismicappUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6FB392F73E5C10E15E5F171E /* Pods_sismicappUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sismicappUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,6 +128,7 @@
 		0D4A762D1D2B3CDA00C32907 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				0D249A4E1D2D814E00855178 /* DeviceInfo.swift */,
 				0D4A762E1D2B3CF300C32907 /* Text.swift */,
 			);
 			name = Helpers;
@@ -207,8 +212,8 @@
 		0DE18D8A1D26DAC900EF39E2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				0DE18D8F1D26F34D00EF39E2 /* EmergencyService.swift */,
 				0D0624161D2C2B260051FDF0 /* Device.swift */,
+				0DE18D8F1D26F34D00EF39E2 /* EmergencyService.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -216,6 +221,7 @@
 		0DE18D8B1D26DAD700EF39E2 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				0D249A4A1D2D703E00855178 /* DeviceViewModel.swift */,
 				0DE18D911D26F44300EF39E2 /* EmergencyServiceViewModel.swift */,
 			);
 			name = ViewModels;
@@ -232,8 +238,8 @@
 		0DFD00001D2877F900DD0111 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				0D249A4C1D2D764400855178 /* IpInfoAPIService.swift */,
 				0DFD00011D28783100DD0111 /* SismicappAPIService.swift */,
-				0DFD00031D28803A00DD0111 /* DeviceAPI.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -531,14 +537,16 @@
 				0D0624171D2C2B260051FDF0 /* Device.swift in Sources */,
 				0DFD00021D28783100DD0111 /* SismicappAPIService.swift in Sources */,
 				0DE18D871D26DA9C00EF39E2 /* SeismController.swift in Sources */,
+				0D249A4B1D2D703E00855178 /* DeviceViewModel.swift in Sources */,
 				0DE18D811D26DA9C00EF39E2 /* EmergencyNumbersController.swift in Sources */,
+				0D249A4F1D2D814E00855178 /* DeviceInfo.swift in Sources */,
 				0DE18D8D1D26DCAF00EF39E2 /* PhoneNumbersCell.swift in Sources */,
 				0DE18D831D26DA9C00EF39E2 /* HomeController.swift in Sources */,
 				0DE18D921D26F44300EF39E2 /* EmergencyServiceViewModel.swift in Sources */,
 				0D4A76311D2B3D8800C32907 /* UIViewController+presentError.swift in Sources */,
-				0DFD00041D28803A00DD0111 /* DeviceAPI.swift in Sources */,
 				0DE18D821D26DA9C00EF39E2 /* FeedbackController.swift in Sources */,
 				0DE18D851D26DA9C00EF39E2 /* NotificationsController.swift in Sources */,
+				0D249A4D1D2D764400855178 /* IpInfoAPIService.swift in Sources */,
 				0DE18D841D26DA9C00EF39E2 /* InformationController.swift in Sources */,
 				0D5D713A1CECD12F000125FC /* AppDelegate.swift in Sources */,
 				0DE18D861D26DA9C00EF39E2 /* RedButtonController.swift in Sources */,

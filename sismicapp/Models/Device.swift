@@ -10,31 +10,55 @@ import Foundation
 import SwiftyJSON
 
 struct Device {
+    
     let token: String
     let push_key: String
     let platform: String
-    let version: Float
+    let version: String
     let model: String
-    let latitude: Float
-    let longitude: Float
-    let city: String
-    let region: String
-    let country: String
+    let device_location: DeviceLocation
+    
     
     init(token: String, push_key: String, platform: String,
-         version: Float, model: String, latitude: Float,
-         longitude: Float, city: String, region: String, country: String) {
+         version: String, model: String, device_location: DeviceLocation) {
         
         self.token = token
         self.push_key = push_key
         self.platform = platform
         self.version = version
         self.model = model
-        self.latitude = latitude
-        self.longitude = longitude
+        self.device_location = device_location
+    }
+    
+}
+
+struct DeviceLocation {
+    
+    let latitude: Double
+    let longitude: Double
+    let city: String
+    let region: String
+    let country: String
+    
+    init?(json: JSON) {
+        
+        guard let
+            loc = json["loc"].string,
+            city = json["city"].string,
+            region = json["region"].string,
+            country = json["country"].string
+        else {
+            return nil
+        }
+        
+        
+        let locationArr = loc.componentsSeparatedByString(",")
+        self.latitude = (Double(locationArr[0]) ?? nil)!
+        self.longitude = (Double(locationArr[1]) ?? nil)!
         self.city = city
         self.region = region
         self.country = country
-        
+
     }
+    
 }
