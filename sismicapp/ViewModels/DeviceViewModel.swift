@@ -11,6 +11,7 @@ import RxSwift
 import Firebase
 import FirebaseInstanceID
 import FirebaseMessaging
+import CoreLocation
 
 final class DeviceViewModel {
     
@@ -18,6 +19,7 @@ final class DeviceViewModel {
     
     private let sismicappService: SismicappAPIService
     private let ipInfoService: IpInfoAPIService
+    private var locationService: LocationService
     private let disposeBag = DisposeBag()
     
     
@@ -55,6 +57,16 @@ final class DeviceViewModel {
         
         // Get the push key
         self.push_key = FIRInstanceID.instanceID().token()!
+        
+        // Request location from ip
+        self.device_location = ipInfoService.getLocation()
+        
+        // Request location from GPS
+        locationService = LocationService()
+        locationService.delegate = self
+        locationService.requestLocation()
+        
+        print("Initializing Device")
     }
     
     
@@ -74,6 +86,9 @@ final class DeviceViewModel {
         let country = device_loc.country
         let device_token = defaults.stringForKey("deviceToken")
         
+        print("Device Token: "+device_token!)
+        print("Device Push Key: "+FIRInstanceID.instanceID().token()!)
+        
         // Register a new session
         if((device_token) != nil){
             sismicappService.registerSession(withDevice: device_token!, withLatitude: latitude, withLongitude: longitude, withCity: city, withRegion: region, withCountry: country)
@@ -85,4 +100,19 @@ final class DeviceViewModel {
         return dev
     }
     
+}
+
+// MARK: LocationServiceDelegate
+extension DeviceViewModel: LocationServiceDelegate {
+    
+    func locationDidUpdate(service: LocationService, location: CLLocation) {
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let latitude = location.coordinate.latitude
+        let longitude = location.coordinate.longitude
+        
+        defaults.setDouble(latitude, forKey: "latitude")
+        defaults.setDouble(longitude, forKey: "longitude")
+        
+    }
 }

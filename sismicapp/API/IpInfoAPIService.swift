@@ -33,6 +33,7 @@ class IpInfoAPIService {
             .map(JSON.init)
             .flatMap {
                 json -> Observable<DeviceLocation> in
+                
                 guard let device_location = DeviceLocation(json: json) else {
                     return Observable.error(APIError.CannotParse)
                 }

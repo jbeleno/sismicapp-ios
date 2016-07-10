@@ -16,6 +16,10 @@ import FirebaseMessaging
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    //MARK: - Dependencies
+    
+    private var deviceViewModel: DeviceViewModel!
 
     var window: UIWindow?
 
@@ -43,6 +47,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                                          selector: #selector(self.tokenRefreshNotification),
                                                          name: kFIRInstanceIDTokenRefreshNotification,
                                                          object: nil)
+        
+        // Testing device view model
+        deviceViewModel = DeviceViewModel(sismicappService: SismicappAPIService(), ipInfoService: IpInfoAPIService())
         
         return true
     }

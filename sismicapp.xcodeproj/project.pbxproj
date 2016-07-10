@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		097104D83F338981EC0DB9B8 /* Pods_sismicappTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCF15D45F2F780B42094CC90 /* Pods_sismicappTests.framework */; };
 		0D0624171D2C2B260051FDF0 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0624161D2C2B260051FDF0 /* Device.swift */; };
+		0D1FC3041D3179BA000B6E5A /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1FC3031D3179BA000B6E5A /* LocationService.swift */; };
 		0D249A4B1D2D703E00855178 /* DeviceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D249A4A1D2D703E00855178 /* DeviceViewModel.swift */; };
 		0D249A4D1D2D764400855178 /* IpInfoAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D249A4C1D2D764400855178 /* IpInfoAPIService.swift */; };
 		0D249A4F1D2D814E00855178 /* DeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D249A4E1D2D814E00855178 /* DeviceInfo.swift */; };
@@ -56,6 +57,7 @@
 
 /* Begin PBXFileReference section */
 		0D0624161D2C2B260051FDF0 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Device.swift; path = Models/Device.swift; sourceTree = "<group>"; };
+		0D1FC3031D3179BA000B6E5A /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationService.swift; path = API/LocationService.swift; sourceTree = "<group>"; };
 		0D249A4A1D2D703E00855178 /* DeviceViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeviceViewModel.swift; path = ViewModels/DeviceViewModel.swift; sourceTree = "<group>"; };
 		0D249A4C1D2D764400855178 /* IpInfoAPIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IpInfoAPIService.swift; path = API/IpInfoAPIService.swift; sourceTree = "<group>"; };
 		0D249A4E1D2D814E00855178 /* DeviceInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeviceInfo.swift; path = Helpers/DeviceInfo.swift; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 			children = (
 				0D249A4C1D2D764400855178 /* IpInfoAPIService.swift */,
 				0DFD00011D28783100DD0111 /* SismicappAPIService.swift */,
+				0D1FC3031D3179BA000B6E5A /* LocationService.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -533,6 +536,7 @@
 			files = (
 				0DE18D881D26DA9C00EF39E2 /* SettingsController.swift in Sources */,
 				0D4A762F1D2B3CF300C32907 /* Text.swift in Sources */,
+				0D1FC3041D3179BA000B6E5A /* LocationService.swift in Sources */,
 				0DE18D901D26F34D00EF39E2 /* EmergencyService.swift in Sources */,
 				0D0624171D2C2B260051FDF0 /* Device.swift in Sources */,
 				0DFD00021D28783100DD0111 /* SismicappAPIService.swift in Sources */,

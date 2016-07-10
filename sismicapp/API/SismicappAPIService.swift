@@ -55,6 +55,8 @@ class SismicappAPIService {
     func registerDevice(        withModel model: String,
                           withOSVersion version: String) -> Observable<String> {
         
+        print("START DEVICE REGISTER")
+        
         let defaults = NSUserDefaults.standardUserDefaults()
         
         if let token = defaults.stringForKey("deviceToken"){
@@ -77,6 +79,7 @@ class SismicappAPIService {
                         .map(JSON.init)
                         .flatMap {
                             json -> Observable<String> in
+                            print("DEVICE REGISTER RESPONSE: "+json.description)
                             guard let device_token = json["device_token"].string else {
                                 return Observable.error(APIError.CannotParse)
                             }
