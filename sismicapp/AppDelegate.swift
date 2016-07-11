@@ -13,6 +13,8 @@ import UIKit
 import Firebase
 import FirebaseInstanceID
 import FirebaseMessaging
+import RxSwift
+import RxCocoa
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //MARK: - Dependencies
     
     private var deviceViewModel: DeviceViewModel!
+    private let disposeBag = DisposeBag()
 
     var window: UIWindow?
 
@@ -49,9 +52,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                                          object: nil)
         
         // Testing device view model
-        deviceViewModel = DeviceViewModel(sismicappService: SismicappAPIService(), ipInfoService: IpInfoAPIService())
+        self.deviceViewModel = DeviceViewModel(sismicappService: SismicappAPIService(), ipInfoService: IpInfoAPIService())
+        addBindToDeviceModel()
         
         return true
+    }
+    
+    func addBindToDeviceModel(){
+        let label1 = UILabel(frame: CGRectMake(0, 0, 200, 21))
+        deviceViewModel.token
+            .bindTo(label1.rx_text)
+            .addDisposableTo(disposeBag)
     }
 
     // [START receive_message]
@@ -75,7 +86,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // [START refresh_token]
     func tokenRefreshNotification(notification: NSNotification) {
         let refreshedToken = FIRInstanceID.instanceID().token()!
-        // print("InstanceID token: \(refreshedToken)")
+        print("InstanceID token: \(refreshedToken)")
         
         // Connect to FCM since connection may have failed when attempted before having a token.
         connectToFcm()

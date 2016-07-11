@@ -77,7 +77,7 @@ class SismicappAPIService {
                 "app_version": Constants.version
             ]
         
-             return request(.POST, ResourcePath.DeviceNew.path, parameters: params)
+             return request(.POST, ResourcePath.DeviceNew.path, parameters: params, encoding: .JSON)
                     .rx_JSON()
                     .map(JSON.init)
                     .flatMap {

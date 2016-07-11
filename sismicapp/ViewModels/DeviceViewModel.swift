@@ -53,7 +53,7 @@ final class DeviceViewModel {
         self.version = UIDevice.currentDevice().systemVersion
         
         // Request for a device token
-        self.token = sismicappService.registerDevice(withModel: self.model, withOSVersion: self.version).shareReplay(1)
+        self.token = sismicappService.registerDevice(withModel: self.model, withOSVersion: self.version).map { $0 ?? "" }
         
         // Get the push key
         self.push_key = FIRInstanceID.instanceID().token()!
