@@ -63,10 +63,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // TODO: Handle data of notification
         
         // Print message ID.
-        print("Message ID: \(userInfo["gcm.message_id"]!)")
+        // print("Message ID: \(userInfo["gcm.message_id"]!)")
         
         // Print full message.
-        print("%@", userInfo)
+        // print("%@", userInfo)
     }
     // [END receive_message]
     
@@ -75,7 +75,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // [START refresh_token]
     func tokenRefreshNotification(notification: NSNotification) {
         let refreshedToken = FIRInstanceID.instanceID().token()!
-        print("InstanceID token: \(refreshedToken)")
+        // print("InstanceID token: \(refreshedToken)")
         
         // Connect to FCM since connection may have failed when attempted before having a token.
         connectToFcm()
@@ -88,9 +88,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func connectToFcm() {
         FIRMessaging.messaging().connectWithCompletion { (error) in
             if (error != nil) {
-                print("Unable to connect with FCM. \(error)")
+                // print("Unable to connect with FCM. \(error)")
             } else {
-                print("Connected to FCM.")
+                // print("Connected to FCM.")
             }
         }
     }

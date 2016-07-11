@@ -53,7 +53,7 @@ final class DeviceViewModel {
         self.version = UIDevice.currentDevice().systemVersion
         
         // Request for a device token
-        self.token = sismicappService.registerDevice(withModel: self.model, withOSVersion: self.version)
+        self.token = sismicappService.registerDevice(withModel: self.model, withOSVersion: self.version).shareReplay(1)
         
         // Get the push key
         self.push_key = FIRInstanceID.instanceID().token()!
@@ -65,8 +65,6 @@ final class DeviceViewModel {
         locationService = LocationService()
         locationService.delegate = self
         locationService.requestLocation()
-        
-        print("Initializing Device")
     }
     
     

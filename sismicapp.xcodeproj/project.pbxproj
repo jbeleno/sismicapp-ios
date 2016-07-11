@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		097104D83F338981EC0DB9B8 /* Pods_sismicappTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCF15D45F2F780B42094CC90 /* Pods_sismicappTests.framework */; };
 		0D0624171D2C2B260051FDF0 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0624161D2C2B260051FDF0 /* Device.swift */; };
 		0D1FC3041D3179BA000B6E5A /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1FC3031D3179BA000B6E5A /* LocationService.swift */; };
 		0D249A4B1D2D703E00855178 /* DeviceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D249A4A1D2D703E00855178 /* DeviceViewModel.swift */; };
@@ -21,6 +20,12 @@
 		0D5D71461CECD12F000125FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D5D71441CECD12F000125FC /* LaunchScreen.storyboard */; };
 		0D5D71511CECD12F000125FC /* sismicappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5D71501CECD12F000125FC /* sismicappTests.swift */; };
 		0D5D715C1CECD12F000125FC /* sismicappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5D715B1CECD12F000125FC /* sismicappUITests.swift */; };
+		0DB4E9F21D333762002690EA /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DB4E9EC1D333762002690EA /* Alamofire.framework */; };
+		0DB4E9F31D333762002690EA /* RxAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DB4E9ED1D333762002690EA /* RxAlamofire.framework */; };
+		0DB4E9F41D333762002690EA /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DB4E9EE1D333762002690EA /* RxBlocking.framework */; };
+		0DB4E9F51D333762002690EA /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DB4E9EF1D333762002690EA /* RxCocoa.framework */; };
+		0DB4E9F61D333762002690EA /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DB4E9F01D333762002690EA /* RxSwift.framework */; };
+		0DB4E9F71D333762002690EA /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DB4E9F11D333762002690EA /* SwiftyJSON.framework */; };
 		0DDD2A331D1351EA002BC775 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0DDD2A321D1351EA002BC775 /* GoogleService-Info.plist */; };
 		0DE18D811D26DA9C00EF39E2 /* EmergencyNumbersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE18D781D26DA9C00EF39E2 /* EmergencyNumbersController.swift */; };
 		0DE18D821D26DA9C00EF39E2 /* FeedbackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE18D791D26DA9C00EF39E2 /* FeedbackController.swift */; };
@@ -34,8 +39,9 @@
 		0DE18D901D26F34D00EF39E2 /* EmergencyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE18D8F1D26F34D00EF39E2 /* EmergencyService.swift */; };
 		0DE18D921D26F44300EF39E2 /* EmergencyServiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE18D911D26F44300EF39E2 /* EmergencyServiceViewModel.swift */; };
 		0DFD00021D28783100DD0111 /* SismicappAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFD00011D28783100DD0111 /* SismicappAPIService.swift */; };
-		752E1FC15F6D17FF8376021D /* Pods_sismicappUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FB392F73E5C10E15E5F171E /* Pods_sismicappUITests.framework */; };
-		91F4EF35E865819C2891C4FC /* Pods_sismicapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9FC05189ED07997468F9EC4 /* Pods_sismicapp.framework */; };
+		328867552653B782078C1AF3 /* Pods_sismicapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C274961A5E7AEC3E6D378FAA /* Pods_sismicapp.framework */; };
+		68E2D695139D900A8BE316C1 /* Pods_sismicappUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C0061A2D95E98941D3CB8AC /* Pods_sismicappUITests.framework */; };
+		EE1024BE8F1242A9DD02E925 /* Pods_sismicappTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55788E71FD09D340C2DCEDF6 /* Pods_sismicappTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +62,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0BB3F19778752E9214A01DD3 /* Pods-sismicappUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sismicappUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sismicappUITests/Pods-sismicappUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		0D0624161D2C2B260051FDF0 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Device.swift; path = Models/Device.swift; sourceTree = "<group>"; };
 		0D1FC3031D3179BA000B6E5A /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationService.swift; path = API/LocationService.swift; sourceTree = "<group>"; };
 		0D249A4A1D2D703E00855178 /* DeviceViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeviceViewModel.swift; path = ViewModels/DeviceViewModel.swift; sourceTree = "<group>"; };
@@ -75,6 +82,12 @@
 		0D5D71571CECD12F000125FC /* sismicappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sismicappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D5D715B1CECD12F000125FC /* sismicappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sismicappUITests.swift; sourceTree = "<group>"; };
 		0D5D715D1CECD12F000125FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DB4E9EC1D333762002690EA /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../Library/Developer/Xcode/DerivedData/sismicapp-givqarzhpxudxcddnstqkcczgzau/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
+		0DB4E9ED1D333762002690EA /* RxAlamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxAlamofire.framework; path = "../../Library/Developer/Xcode/DerivedData/sismicapp-givqarzhpxudxcddnstqkcczgzau/Build/Products/Debug-iphonesimulator/RxAlamofire/RxAlamofire.framework"; sourceTree = "<group>"; };
+		0DB4E9EE1D333762002690EA /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = "../../Library/Developer/Xcode/DerivedData/sismicapp-givqarzhpxudxcddnstqkcczgzau/Build/Products/Debug-iphonesimulator/RxBlocking/RxBlocking.framework"; sourceTree = "<group>"; };
+		0DB4E9EF1D333762002690EA /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = "../../Library/Developer/Xcode/DerivedData/sismicapp-givqarzhpxudxcddnstqkcczgzau/Build/Products/Debug-iphonesimulator/RxCocoa/RxCocoa.framework"; sourceTree = "<group>"; };
+		0DB4E9F01D333762002690EA /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = "../../Library/Developer/Xcode/DerivedData/sismicapp-givqarzhpxudxcddnstqkcczgzau/Build/Products/Debug-iphonesimulator/RxSwift/RxSwift.framework"; sourceTree = "<group>"; };
+		0DB4E9F11D333762002690EA /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../Library/Developer/Xcode/DerivedData/sismicapp-givqarzhpxudxcddnstqkcczgzau/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		0DDD2A321D1351EA002BC775 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0DE18D781D26DA9C00EF39E2 /* EmergencyNumbersController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmergencyNumbersController.swift; path = View/EmergencyNumbersController.swift; sourceTree = "<group>"; };
 		0DE18D791D26DA9C00EF39E2 /* FeedbackController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedbackController.swift; path = View/FeedbackController.swift; sourceTree = "<group>"; };
@@ -88,15 +101,14 @@
 		0DE18D8F1D26F34D00EF39E2 /* EmergencyService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmergencyService.swift; path = Models/EmergencyService.swift; sourceTree = "<group>"; };
 		0DE18D911D26F44300EF39E2 /* EmergencyServiceViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmergencyServiceViewModel.swift; path = ViewModels/EmergencyServiceViewModel.swift; sourceTree = "<group>"; };
 		0DFD00011D28783100DD0111 /* SismicappAPIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SismicappAPIService.swift; path = API/SismicappAPIService.swift; sourceTree = "<group>"; };
-		2D02A47CED6CB8748CC43D0D /* Pods-sismicappTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sismicappTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-sismicappTests/Pods-sismicappTests.release.xcconfig"; sourceTree = "<group>"; };
-		5E5811D27C4B35AEE9382125 /* Pods-sismicappUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sismicappUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-sismicappUITests/Pods-sismicappUITests.release.xcconfig"; sourceTree = "<group>"; };
-		6FB392F73E5C10E15E5F171E /* Pods_sismicappUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sismicappUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		92DA51F1B18832BF956BB494 /* Pods-sismicappTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sismicappTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sismicappTests/Pods-sismicappTests.debug.xcconfig"; sourceTree = "<group>"; };
-		A69D576DBED710BEC13A70B3 /* Pods-sismicapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sismicapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sismicapp/Pods-sismicapp.debug.xcconfig"; sourceTree = "<group>"; };
-		A9FC05189ED07997468F9EC4 /* Pods_sismicapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sismicapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BCF15D45F2F780B42094CC90 /* Pods_sismicappTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sismicappTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CC337DCCB5008ACCA3E1242C /* Pods-sismicappUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sismicappUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sismicappUITests/Pods-sismicappUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		FE7F4B56F8E85BD19736FCF8 /* Pods-sismicapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sismicapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-sismicapp/Pods-sismicapp.release.xcconfig"; sourceTree = "<group>"; };
+		55788E71FD09D340C2DCEDF6 /* Pods_sismicappTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sismicappTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C0061A2D95E98941D3CB8AC /* Pods_sismicappUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sismicappUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B3356C173A31D813037E03B /* Pods-sismicappTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sismicappTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sismicappTests/Pods-sismicappTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7DEFC4C69783DF59CC25FA87 /* Pods-sismicapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sismicapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-sismicapp/Pods-sismicapp.release.xcconfig"; sourceTree = "<group>"; };
+		7E52EF8E984E5EA7F5F76926 /* Pods-sismicapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sismicapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sismicapp/Pods-sismicapp.debug.xcconfig"; sourceTree = "<group>"; };
+		91BA1D753991A21E501A7EBD /* Pods-sismicappTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sismicappTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-sismicappTests/Pods-sismicappTests.release.xcconfig"; sourceTree = "<group>"; };
+		C21D9D1ED4B73F381738FCAF /* Pods-sismicappUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sismicappUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-sismicappUITests/Pods-sismicappUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C274961A5E7AEC3E6D378FAA /* Pods_sismicapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sismicapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +116,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91F4EF35E865819C2891C4FC /* Pods_sismicapp.framework in Frameworks */,
+				0DB4E9F21D333762002690EA /* Alamofire.framework in Frameworks */,
+				0DB4E9F31D333762002690EA /* RxAlamofire.framework in Frameworks */,
+				0DB4E9F41D333762002690EA /* RxBlocking.framework in Frameworks */,
+				0DB4E9F51D333762002690EA /* RxCocoa.framework in Frameworks */,
+				0DB4E9F61D333762002690EA /* RxSwift.framework in Frameworks */,
+				0DB4E9F71D333762002690EA /* SwiftyJSON.framework in Frameworks */,
+				328867552653B782078C1AF3 /* Pods_sismicapp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,7 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				097104D83F338981EC0DB9B8 /* Pods_sismicappTests.framework in Frameworks */,
+				EE1024BE8F1242A9DD02E925 /* Pods_sismicappTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,7 +138,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				752E1FC15F6D17FF8376021D /* Pods_sismicappUITests.framework in Frameworks */,
+				68E2D695139D900A8BE316C1 /* Pods_sismicappUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,8 +161,8 @@
 				0D5D714F1CECD12F000125FC /* sismicappTests */,
 				0D5D715A1CECD12F000125FC /* sismicappUITests */,
 				0D5D71371CECD12E000125FC /* Products */,
-				100F839864502E4F2448635E /* Pods */,
-				84637D781308E44AFB7A96E7 /* Frameworks */,
+				CDDA63EC2AA09F0281E80CDC /* Pods */,
+				9B6A1882D789D84E2CF3D38A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -247,27 +265,33 @@
 			name = API;
 			sourceTree = "<group>";
 		};
-		100F839864502E4F2448635E /* Pods */ = {
+		9B6A1882D789D84E2CF3D38A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A69D576DBED710BEC13A70B3 /* Pods-sismicapp.debug.xcconfig */,
-				FE7F4B56F8E85BD19736FCF8 /* Pods-sismicapp.release.xcconfig */,
-				92DA51F1B18832BF956BB494 /* Pods-sismicappTests.debug.xcconfig */,
-				2D02A47CED6CB8748CC43D0D /* Pods-sismicappTests.release.xcconfig */,
-				CC337DCCB5008ACCA3E1242C /* Pods-sismicappUITests.debug.xcconfig */,
-				5E5811D27C4B35AEE9382125 /* Pods-sismicappUITests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		84637D781308E44AFB7A96E7 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				A9FC05189ED07997468F9EC4 /* Pods_sismicapp.framework */,
-				BCF15D45F2F780B42094CC90 /* Pods_sismicappTests.framework */,
-				6FB392F73E5C10E15E5F171E /* Pods_sismicappUITests.framework */,
+				0DB4E9EC1D333762002690EA /* Alamofire.framework */,
+				0DB4E9ED1D333762002690EA /* RxAlamofire.framework */,
+				0DB4E9EE1D333762002690EA /* RxBlocking.framework */,
+				0DB4E9EF1D333762002690EA /* RxCocoa.framework */,
+				0DB4E9F01D333762002690EA /* RxSwift.framework */,
+				0DB4E9F11D333762002690EA /* SwiftyJSON.framework */,
+				C274961A5E7AEC3E6D378FAA /* Pods_sismicapp.framework */,
+				55788E71FD09D340C2DCEDF6 /* Pods_sismicappTests.framework */,
+				5C0061A2D95E98941D3CB8AC /* Pods_sismicappUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CDDA63EC2AA09F0281E80CDC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7E52EF8E984E5EA7F5F76926 /* Pods-sismicapp.debug.xcconfig */,
+				7DEFC4C69783DF59CC25FA87 /* Pods-sismicapp.release.xcconfig */,
+				7B3356C173A31D813037E03B /* Pods-sismicappTests.debug.xcconfig */,
+				91BA1D753991A21E501A7EBD /* Pods-sismicappTests.release.xcconfig */,
+				0BB3F19778752E9214A01DD3 /* Pods-sismicappUITests.debug.xcconfig */,
+				C21D9D1ED4B73F381738FCAF /* Pods-sismicappUITests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,12 +301,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0D5D71601CECD12F000125FC /* Build configuration list for PBXNativeTarget "sismicapp" */;
 			buildPhases = (
-				7C076DD079A753250EC0698C /* Check Pods Manifest.lock */,
+				BF9CB1483018D5578FD2544D /* [CP] Check Pods Manifest.lock */,
 				0D5D71321CECD12E000125FC /* Sources */,
 				0D5D71331CECD12E000125FC /* Frameworks */,
 				0D5D71341CECD12E000125FC /* Resources */,
-				0D0E9FC7C54395B0971A47EC /* Embed Pods Frameworks */,
-				2E335E045F854655571B9D18 /* Copy Pods Resources */,
+				9B955F620177A0BD341B884D /* [CP] Embed Pods Frameworks */,
+				4BC61B9B2D4567B3FCFD05FA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -297,12 +321,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0D5D71631CECD12F000125FC /* Build configuration list for PBXNativeTarget "sismicappTests" */;
 			buildPhases = (
-				0B62C3C959127336CB107125 /* Check Pods Manifest.lock */,
+				99561085ACF32A10F83A5E95 /* [CP] Check Pods Manifest.lock */,
 				0D5D71481CECD12F000125FC /* Sources */,
 				0D5D71491CECD12F000125FC /* Frameworks */,
 				0D5D714A1CECD12F000125FC /* Resources */,
-				9A167FEBCE071A98697A144D /* Embed Pods Frameworks */,
-				03B67E4EF00737FBF8F81E30 /* Copy Pods Resources */,
+				445F7EC4B4FE67AC9150F0D3 /* [CP] Embed Pods Frameworks */,
+				18C6DB39B9C213C0581576A1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -318,11 +342,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0D5D71661CECD12F000125FC /* Build configuration list for PBXNativeTarget "sismicappUITests" */;
 			buildPhases = (
-				23E09641B4DBDA24F113E217 /* Check Pods Manifest.lock */,
+				D0DCC8D2523E4F20D8E09E9D /* [CP] Check Pods Manifest.lock */,
 				0D5D71531CECD12F000125FC /* Sources */,
 				0D5D71541CECD12F000125FC /* Frameworks */,
 				0D5D71551CECD12F000125FC /* Resources */,
-				4361FCA9CEDDF366AF195790 /* Copy Pods Resources */,
+				EFA5CA114465B72B2E39E3AF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -407,14 +431,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		03B67E4EF00737FBF8F81E30 /* Copy Pods Resources */ = {
+		18C6DB39B9C213C0581576A1 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,59 +446,29 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-sismicappTests/Pods-sismicappTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		0B62C3C959127336CB107125 /* Check Pods Manifest.lock */ = {
+		445F7EC4B4FE67AC9150F0D3 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-sismicappTests/Pods-sismicappTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		0D0E9FC7C54395B0971A47EC /* Embed Pods Frameworks */ = {
+		4BC61B9B2D4567B3FCFD05FA /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-sismicapp/Pods-sismicapp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		23E09641B4DBDA24F113E217 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		2E335E045F854655571B9D18 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,29 +476,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-sismicapp/Pods-sismicapp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4361FCA9CEDDF366AF195790 /* Copy Pods Resources */ = {
+		99561085ACF32A10F83A5E95 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-sismicappUITests/Pods-sismicappUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7C076DD079A753250EC0698C /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -512,19 +491,64 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		9A167FEBCE071A98697A144D /* Embed Pods Frameworks */ = {
+		9B955F620177A0BD341B884D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-sismicappTests/Pods-sismicappTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-sismicapp/Pods-sismicapp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF9CB1483018D5578FD2544D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D0DCC8D2523E4F20D8E09E9D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EFA5CA114465B72B2E39E3AF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-sismicappUITests/Pods-sismicappUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -693,7 +717,7 @@
 		};
 		0D5D71611CECD12F000125FC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A69D576DBED710BEC13A70B3 /* Pods-sismicapp.debug.xcconfig */;
+			baseConfigurationReference = 7E52EF8E984E5EA7F5F76926 /* Pods-sismicapp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -707,7 +731,7 @@
 		};
 		0D5D71621CECD12F000125FC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FE7F4B56F8E85BD19736FCF8 /* Pods-sismicapp.release.xcconfig */;
+			baseConfigurationReference = 7DEFC4C69783DF59CC25FA87 /* Pods-sismicapp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -721,7 +745,7 @@
 		};
 		0D5D71641CECD12F000125FC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 92DA51F1B18832BF956BB494 /* Pods-sismicappTests.debug.xcconfig */;
+			baseConfigurationReference = 7B3356C173A31D813037E03B /* Pods-sismicappTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = sismicappTests/Info.plist;
@@ -734,7 +758,7 @@
 		};
 		0D5D71651CECD12F000125FC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2D02A47CED6CB8748CC43D0D /* Pods-sismicappTests.release.xcconfig */;
+			baseConfigurationReference = 91BA1D753991A21E501A7EBD /* Pods-sismicappTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = sismicappTests/Info.plist;
@@ -747,7 +771,7 @@
 		};
 		0D5D71671CECD12F000125FC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CC337DCCB5008ACCA3E1242C /* Pods-sismicappUITests.debug.xcconfig */;
+			baseConfigurationReference = 0BB3F19778752E9214A01DD3 /* Pods-sismicappUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = sismicappUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -759,7 +783,7 @@
 		};
 		0D5D71681CECD12F000125FC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5E5811D27C4B35AEE9382125 /* Pods-sismicappUITests.release.xcconfig */;
+			baseConfigurationReference = C21D9D1ED4B73F381738FCAF /* Pods-sismicappUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = sismicappUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

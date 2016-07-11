@@ -7,13 +7,14 @@
 //
 
 import Foundation
+import Firebase
+import FirebaseInstanceID
+import FirebaseMessaging
 import Alamofire
 import RxSwift
 import RxAlamofire
 import SwiftyJSON
-import Firebase
-import FirebaseInstanceID
-import FirebaseMessaging
+
 
 
 class SismicappAPIService {
@@ -60,6 +61,8 @@ class SismicappAPIService {
         let defaults = NSUserDefaults.standardUserDefaults()
         
         if let token = defaults.stringForKey("deviceToken"){
+            print("DEVICE REGISTER RESPONSE: "+token)
+            
             // Update the push key
             let push_key = FIRInstanceID.instanceID().token()!
             self.updateDevicePushKey(withDevice: token, withPushKey: push_key)
@@ -74,25 +77,26 @@ class SismicappAPIService {
                 "app_version": Constants.version
             ]
         
-            return request(.POST, ResourcePath.DeviceNew.path, parameters: params)
-                        .rx_JSON()
-                        .map(JSON.init)
-                        .flatMap {
-                            json -> Observable<String> in
-                            print("DEVICE REGISTER RESPONSE: "+json.description)
-                            guard let device_token = json["device_token"].string else {
-                                return Observable.error(APIError.CannotParse)
-                            }
-                        
-                            // Storing the data in NSUserDefaults
-                            defaults.setObject(device_token, forKey: "deviceToken")
-                            
-                            // Update the push key
-                            let push_key = FIRInstanceID.instanceID().token()!
-                            self.updateDevicePushKey(withDevice: device_token, withPushKey: push_key)
-                        
-                            return Observable.just(device_token)
+             return request(.POST, ResourcePath.DeviceNew.path, parameters: params)
+                    .rx_JSON()
+                    .map(JSON.init)
+                    .flatMap {
+                        json -> Observable<String> in
+                        print("DEVICE REGISTER RESPONSE: "+json.description)
+                        guard let device_token = json["device_token"].string else {
+                            return Observable.error(APIError.CannotParse)
                         }
+                    
+                        // Storing the data in NSUserDefaults
+                        defaults.setObject(device_token, forKey: "deviceToken")
+                    
+                        // Update the push key
+                        let push_key = FIRInstanceID.instanceID().token()!
+                        self.updateDevicePushKey(withDevice: device_token, withPushKey: push_key)
+                    
+                        return Observable.just(device_token)
+                    }
+            
         }
     }
     
@@ -193,7 +197,7 @@ class SismicappAPIService {
                 self.updateDevicePushKey(withDevice: device_token, withPushKey: push_key)
                 
                 return Observable.just(status)
-        }
+            }
     }
     
     // [END session_services]

@@ -4,14 +4,14 @@ platform :ios, '8.0'
 use_frameworks!
 
 target 'sismicapp' do
-    pod 'Firebase'
-    pod 'Firebase/Messaging'
-    pod 'RxSwift'
-    pod 'RxCocoa'
-    pod 'RxBlocking'
-    pod 'SwiftyJSON'
-    pod 'Alamofire'
-    pod 'RxAlamofire'
+    pod 'Firebase', '~>3.3'
+    pod 'Firebase/Messaging' # pod 'FirebaseMessaging' '~>1.1.0'
+    pod 'RxSwift', '~> 2.6'
+    pod 'RxCocoa', '~> 2.6'
+    pod 'RxBlocking', '~> 2.6'
+    pod 'SwiftyJSON', '2.3.2'
+    pod 'Alamofire', '~> 3.4.1'
+    pod 'RxAlamofire', '~> 2.5'
 end
 
 target 'sismicappTests' do
