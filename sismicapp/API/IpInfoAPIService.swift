@@ -27,13 +27,13 @@ class IpInfoAPIService {
     
     // Get the device location information based on user IP
     func getLocation() -> Observable<DeviceLocation> {
-        
+        print("ENTRA")
         return request(.POST, Constants.baseURL, parameters: nil)
             .rx_JSON()
             .map(JSON.init)
             .flatMap {
                 json -> Observable<DeviceLocation> in
-                
+                print("SALE")
                 guard let device_location = DeviceLocation(json: json) else {
                     return Observable.error(APIError.CannotParse)
                 }

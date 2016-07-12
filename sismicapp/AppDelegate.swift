@@ -59,10 +59,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func addBindToDeviceModel(){
-        let label1 = UILabel(frame: CGRectMake(0, 0, 200, 21))
-        deviceViewModel.token
-            .bindTo(label1.rx_text)
-            .addDisposableTo(disposeBag)
+        // # Machetazo ~ Gambiarra
+        // The ViewModel always needs a bind/suscribe to execute cold observable
+        self.deviceViewModel.token.subscribe()
+        self.deviceViewModel.device_location.subscribe() // This doesn't work
     }
 
     // [START receive_message]
@@ -87,6 +87,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func tokenRefreshNotification(notification: NSNotification) {
         let refreshedToken = FIRInstanceID.instanceID().token()!
         print("InstanceID token: \(refreshedToken)")
+        
+        // Trying to update the device push key
+        let defaults = NSUserDefaults.standardUserDefaults()
+        if let token = defaults.stringForKey("deviceToken") {
+            // # Machetazo ~ Gambiarra
+            // The ViewModel always needs a bind/suscribe to execute cold observable
+            deviceViewModel.updatePushKey(token, withPushKey: refreshedToken).subscribe()
+        }
         
         // Connect to FCM since connection may have failed when attempted before having a token.
         connectToFcm()

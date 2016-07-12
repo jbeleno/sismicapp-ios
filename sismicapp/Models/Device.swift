@@ -12,18 +12,16 @@ import SwiftyJSON
 struct Device {
     
     let token: String
-    let push_key: String
     let platform: String
     let version: String
     let model: String
     let device_location: DeviceLocation
     
     
-    init(token: String, push_key: String, platform: String,
-         version: String, model: String, device_location: DeviceLocation) {
+    init(token: String, platform: String, version: String,
+         model: String, device_location: DeviceLocation) {
         
         self.token = token
-        self.push_key = push_key
         self.platform = platform
         self.version = version
         self.model = model

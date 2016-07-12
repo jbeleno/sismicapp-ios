@@ -24,15 +24,9 @@ final class DeviceViewModel {
     
     
     //MARK: - Model
-    let token: Observable<String>
-    let device_location: Observable<DeviceLocation>
+    var token: Observable<String>
+    var device_location: Observable<DeviceLocation>
     
-    var device: Observable<Device>{
-        return device_location.map(self.createDevice)
-    }
-    
-    
-    let push_key: String
     let platform: String
     let version: String
     let model: String
@@ -53,13 +47,10 @@ final class DeviceViewModel {
         self.version = UIDevice.currentDevice().systemVersion
         
         // Request for a device token
-        self.token = sismicappService.registerDevice(withModel: self.model, withOSVersion: self.version).map { $0 ?? "" }
-        
-        // Get the push key
-        self.push_key = FIRInstanceID.instanceID().token()!
+        self.token = sismicappService.registerDevice(withModel: self.model, withOSVersion: self.version).retry(3)
         
         // Request location from ip
-        self.device_location = ipInfoService.getLocation()
+        self.device_location = ipInfoService.getLocation().retry(3)
         
         // Request location from GPS
         locationService = LocationService()
@@ -67,35 +58,28 @@ final class DeviceViewModel {
         locationService.requestLocation()
     }
     
+    //MARK: - Public methods
     
-    //MARK: - Private methods
+    // Generate token
+    func generateToken() -> Observable<String>{
+        self.token = sismicappService.registerDevice(withModel: self.model, withOSVersion: self.version).retry(3)
+        return self.token
+    }
     
+    // New session
+    func newSession(withDevice: String, withLatitude: Double, withLongitude: Double, withCity: String, withRegion: String, withCountry: String){
+        sismicappService.registerSession(withDevice: withDevice, withLatitude: withLatitude, withLongitude: withLongitude, withCity: withCity, withRegion: withRegion, withCountry: withCountry)
+    }
     
-    // This method observes when the device location changes and start the creation of
-    // the device variable
-    private func createDevice(from device_loc: DeviceLocation)-> Device {
-        
-        let defaults = NSUserDefaults.standardUserDefaults()
-        
-        let latitude = device_loc.latitude
-        let longitude = device_loc.longitude
-        let city = device_loc.city
-        let region = device_loc.region
-        let country = device_loc.country
-        let device_token = defaults.stringForKey("deviceToken")
-        
-        print("Device Token: "+device_token!)
-        print("Device Push Key: "+FIRInstanceID.instanceID().token()!)
-        
-        // Register a new session
-        if((device_token) != nil){
-            sismicappService.registerSession(withDevice: device_token!, withLatitude: latitude, withLongitude: longitude, withCity: city, withRegion: region, withCountry: country)
-        }
-        
-        // Create a new device
-        let dev = Device(token: device_token!, push_key: self.push_key, platform: self.platform, version: self.version, model: self.model, device_location: device_loc)
-        
-        return dev
+    // Update location based on IP
+    func updateLocation() -> Observable<DeviceLocation>{
+        self.device_location = ipInfoService.getLocation().retry(3)
+        return self.device_location
+    }
+    
+    // Update the push key
+    func updatePushKey(withDeviceToken: String, withPushKey: String) -> Observable<Bool>{
+        return sismicappService.updateDevicePushKey(withDevice: withDeviceToken, withPushKey: withPushKey).retry(3)
     }
     
 }
