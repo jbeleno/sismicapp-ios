@@ -15,6 +15,7 @@ import FirebaseInstanceID
 import FirebaseMessaging
 import RxSwift
 import RxCocoa
+import RxAlamofire
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -61,8 +62,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func addBindToDeviceModel(){
         // # Machetazo ~ Gambiarra
         // The ViewModel always needs a bind/suscribe to execute cold observable
-        self.deviceViewModel.token.subscribe()
-        self.deviceViewModel.device_location.subscribe() // This doesn't work
+        self.deviceViewModel
+            .token
+            .subscribe()
+            .addDisposableTo(disposeBag)
     }
 
     // [START receive_message]
@@ -93,7 +96,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let token = defaults.stringForKey("deviceToken") {
             // # Machetazo ~ Gambiarra
             // The ViewModel always needs a bind/suscribe to execute cold observable
-            deviceViewModel.updatePushKey(token, withPushKey: refreshedToken).subscribe()
+            self.deviceViewModel
+                .updatePushKey(token, withPushKey: refreshedToken)
+                .subscribe()
+                .addDisposableTo(disposeBag)
+            
+            self.deviceViewModel
+                .device_location
+                .observeOn(MainScheduler.instance)
+                .subscribeNext{ dev_loc in
+                    print("ENTRA")
+                    let latitude = dev_loc.latitude
+                    let longitude = dev_loc.longitude
+                    let country = dev_loc.country
+                    let region = dev_loc.region
+                    let city = dev_loc.region
+                    
+                    self.deviceViewModel.newSession(token, withLatitude: latitude, withLongitude: longitude, withCity: city, withRegion: region, withCountry: country)
+                }
+                .addDisposableTo(disposeBag)
         }
         
         // Connect to FCM since connection may have failed when attempted before having a token.

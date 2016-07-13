@@ -17,7 +17,7 @@ class IpInfoAPIService {
     // Here goes the constants that will be used on the IP Info
     // API Service
     private struct Constants {
-        static let baseURL = "http://ipinfo.io/"
+        static let baseURL = "http://ipinfo.io/json"
     }
     
     // Here goes the list of error that could handle the API
@@ -27,13 +27,11 @@ class IpInfoAPIService {
     
     // Get the device location information based on user IP
     func getLocation() -> Observable<DeviceLocation> {
-        print("ENTRA")
-        return request(.POST, Constants.baseURL, parameters: nil)
+        return request(.GET, Constants.baseURL, parameters: nil)
             .rx_JSON()
             .map(JSON.init)
             .flatMap {
                 json -> Observable<DeviceLocation> in
-                print("SALE")
                 guard let device_location = DeviceLocation(json: json) else {
                     return Observable.error(APIError.CannotParse)
                 }
