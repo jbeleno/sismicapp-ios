@@ -110,7 +110,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     let longitude = dev_loc.longitude
                     let country = dev_loc.country
                     let region = dev_loc.region
-                    let city = dev_loc.region
+                    let city = dev_loc.city
                     
                     self.deviceViewModel.newSession(token, withLatitude: latitude, withLongitude: longitude, withCity: city, withRegion: region, withCountry: country)
                 }

@@ -26,11 +26,6 @@ final class DeviceViewModel {
     //MARK: - Model
     var token: Observable<String>
     var device_location: Observable<DeviceLocation>
-    let latitude: Observable<Double>
-    let longitude: Observable<Double>
-    let country: Observable<String>
-    let region: Observable<String>
-    let city: Observable<String>
     
     let platform: String
     let version: String
@@ -56,12 +51,6 @@ final class DeviceViewModel {
         
         // Request location from ip
         self.device_location = ipInfoService.getLocation().retry(3)
-        
-        self.latitude = self.device_location.map{$0.latitude}
-        self.longitude = self.device_location.map{$0.longitude}
-        self.country = self.device_location.map{$0.country}
-        self.region = self.device_location.map{$0.region}
-        self.city = self.device_location.map{$0.city}
         
         // Request location from GPS
         locationService = LocationService()
