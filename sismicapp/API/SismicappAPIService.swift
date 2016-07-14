@@ -23,7 +23,8 @@ class SismicappAPIService {
     // API Service
     private struct Constants {
         static let baseURL = "http://app.sismicapp.com/"
-        static let version = "2.0"
+        static let version = "1.0"
+        static let platform = "iOS"
     }
     
     // Here goes the URI's of services in the web
@@ -63,7 +64,7 @@ class SismicappAPIService {
         }else{
         
             let params: [String: AnyObject] = [
-                "platform": "iOS",
+                "platform": Constants.platform,
                 "version": version,
                 "model": model,
                 "app_version": Constants.version
@@ -145,6 +146,34 @@ class SismicappAPIService {
     }
     
     // [END emergency_services]
+    
+    
+    
+    // [START seism_services]
+    
+    // Get a list from the last 20 seisms in Colombia
+    func all_seisms(withDevice device_token: String) -> Observable<SeismList>{
+        
+        let params: [String: AnyObject] = [
+            "device_token": device_token
+        ]
+        
+        return request(.POST, ResourcePath.SeismList.path, parameters: params)
+            .rx_JSON()
+            .map(JSON.init)
+            .flatMap {
+                json -> Observable<SeismList> in
+                guard let seisms = SeismList(json: json)
+                    where json["status"].string == "OK"
+                else {
+                        return Observable.error(APIError.CannotParse)
+                }
+                
+                return Observable.just(seisms)
+        }
+    }
+    
+    // [STOP seism_services]
     
     
     

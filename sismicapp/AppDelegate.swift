@@ -3,7 +3,9 @@
 //  sismicapp
 //
 //  This file is handling with changing the default color in the TabBar,
-//  it's handling with client side of notifications
+//  it's handling with client side of notifications, also has the device
+//  data so it can be use to get the location based on IP or to set a new
+//  session, etc
 //
 //  Created by Juan Beleño Díaz on 18/05/16.
 //  Copyright © 2016 Juan Beleño Díaz. All rights reserved.
@@ -52,7 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                                          name: kFIRInstanceIDTokenRefreshNotification,
                                                          object: nil)
         
-        // Testing device view model
+        // The device view model
         self.deviceViewModel = DeviceViewModel(sismicappService: SismicappAPIService(), ipInfoService: IpInfoAPIService())
         addBindToDeviceModel()
         
@@ -97,7 +99,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // # Machetazo ~ Gambiarra
             // The ViewModel always needs a bind/suscribe to execute cold observable
             self.deviceViewModel
-                .updatePushKey(token, withPushKey: refreshedToken)
+                .updatePushKey(withDeviceToken: token, withPushKey: refreshedToken)
                 .subscribe()
                 .addDisposableTo(disposeBag)
             
@@ -112,7 +114,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     let region = dev_loc.region
                     let city = dev_loc.city
                     
-                    self.deviceViewModel.newSession(token, withLatitude: latitude, withLongitude: longitude, withCity: city, withRegion: region, withCountry: country)
+                    self.deviceViewModel.newSession(withDevice: token, withLatitude: latitude, withLongitude: longitude, withCity: city, withRegion: region, withCountry: country)
                 }
                 .addDisposableTo(disposeBag)
         }

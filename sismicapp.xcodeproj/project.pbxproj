@@ -38,6 +38,9 @@
 		0DE18D8D1D26DCAF00EF39E2 /* PhoneNumbersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE18D8C1D26DCAF00EF39E2 /* PhoneNumbersCell.swift */; };
 		0DE18D901D26F34D00EF39E2 /* EmergencyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE18D8F1D26F34D00EF39E2 /* EmergencyService.swift */; };
 		0DE18D921D26F44300EF39E2 /* EmergencyServiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE18D911D26F44300EF39E2 /* EmergencyServiceViewModel.swift */; };
+		0DE34B4B1D36C92B00742793 /* SeismCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE34B4A1D36C92B00742793 /* SeismCell.swift */; };
+		0DE7278E1D3805B40006796D /* Seism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE7278D1D3805B40006796D /* Seism.swift */; };
+		0DE727901D3809BE0006796D /* SeismListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE7278F1D3809BE0006796D /* SeismListViewModel.swift */; };
 		0DFD00021D28783100DD0111 /* SismicappAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFD00011D28783100DD0111 /* SismicappAPIService.swift */; };
 		328867552653B782078C1AF3 /* Pods_sismicapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C274961A5E7AEC3E6D378FAA /* Pods_sismicapp.framework */; };
 		68E2D695139D900A8BE316C1 /* Pods_sismicappUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C0061A2D95E98941D3CB8AC /* Pods_sismicappUITests.framework */; };
@@ -100,6 +103,9 @@
 		0DE18D8C1D26DCAF00EF39E2 /* PhoneNumbersCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhoneNumbersCell.swift; path = View/Cells/PhoneNumbersCell.swift; sourceTree = "<group>"; };
 		0DE18D8F1D26F34D00EF39E2 /* EmergencyService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmergencyService.swift; path = Models/EmergencyService.swift; sourceTree = "<group>"; };
 		0DE18D911D26F44300EF39E2 /* EmergencyServiceViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmergencyServiceViewModel.swift; path = ViewModels/EmergencyServiceViewModel.swift; sourceTree = "<group>"; };
+		0DE34B4A1D36C92B00742793 /* SeismCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SeismCell.swift; path = View/Cells/SeismCell.swift; sourceTree = "<group>"; };
+		0DE7278D1D3805B40006796D /* Seism.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Seism.swift; path = Models/Seism.swift; sourceTree = "<group>"; };
+		0DE7278F1D3809BE0006796D /* SeismListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SeismListViewModel.swift; path = ViewModels/SeismListViewModel.swift; sourceTree = "<group>"; };
 		0DFD00011D28783100DD0111 /* SismicappAPIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SismicappAPIService.swift; path = API/SismicappAPIService.swift; sourceTree = "<group>"; };
 		55788E71FD09D340C2DCEDF6 /* Pods_sismicappTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sismicappTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C0061A2D95E98941D3CB8AC /* Pods_sismicappUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sismicappUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -234,6 +240,7 @@
 			children = (
 				0D0624161D2C2B260051FDF0 /* Device.swift */,
 				0DE18D8F1D26F34D00EF39E2 /* EmergencyService.swift */,
+				0DE7278D1D3805B40006796D /* Seism.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -243,6 +250,7 @@
 			children = (
 				0D249A4A1D2D703E00855178 /* DeviceViewModel.swift */,
 				0DE18D911D26F44300EF39E2 /* EmergencyServiceViewModel.swift */,
+				0DE7278F1D3809BE0006796D /* SeismListViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -251,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				0DE18D8C1D26DCAF00EF39E2 /* PhoneNumbersCell.swift */,
+				0DE34B4A1D36C92B00742793 /* SeismCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -561,10 +570,12 @@
 				0DE18D881D26DA9C00EF39E2 /* SettingsController.swift in Sources */,
 				0D4A762F1D2B3CF300C32907 /* Text.swift in Sources */,
 				0D1FC3041D3179BA000B6E5A /* LocationService.swift in Sources */,
+				0DE7278E1D3805B40006796D /* Seism.swift in Sources */,
 				0DE18D901D26F34D00EF39E2 /* EmergencyService.swift in Sources */,
 				0D0624171D2C2B260051FDF0 /* Device.swift in Sources */,
 				0DFD00021D28783100DD0111 /* SismicappAPIService.swift in Sources */,
 				0DE18D871D26DA9C00EF39E2 /* SeismController.swift in Sources */,
+				0DE34B4B1D36C92B00742793 /* SeismCell.swift in Sources */,
 				0D249A4B1D2D703E00855178 /* DeviceViewModel.swift in Sources */,
 				0DE18D811D26DA9C00EF39E2 /* EmergencyNumbersController.swift in Sources */,
 				0D249A4F1D2D814E00855178 /* DeviceInfo.swift in Sources */,
@@ -574,6 +585,7 @@
 				0D4A76311D2B3D8800C32907 /* UIViewController+presentError.swift in Sources */,
 				0DE18D821D26DA9C00EF39E2 /* FeedbackController.swift in Sources */,
 				0DE18D851D26DA9C00EF39E2 /* NotificationsController.swift in Sources */,
+				0DE727901D3809BE0006796D /* SeismListViewModel.swift in Sources */,
 				0D249A4D1D2D764400855178 /* IpInfoAPIService.swift in Sources */,
 				0DE18D841D26DA9C00EF39E2 /* InformationController.swift in Sources */,
 				0D5D713A1CECD12F000125FC /* AppDelegate.swift in Sources */,

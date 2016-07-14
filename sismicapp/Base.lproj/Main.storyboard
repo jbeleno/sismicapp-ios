@@ -16,10 +16,96 @@
                     <view key="view" contentMode="scaleToFill" id="rbs-4D-dQW">
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="41" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2aG-rn-5Wr">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="seismCell" rowHeight="52" id="p7E-wd-AwU" customClass="SeismCell" customModule="sismicapp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="52"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="p7E-wd-AwU" id="s3q-AP-V1J">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="52"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="3.4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="meB-nL-gfB">
+                                                    <rect key="frame" x="8" y="8.5" width="36" height="36.5"/>
+                                                    <color key="backgroundColor" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="36" id="HQ1-WZ-pC8"/>
+                                                        <constraint firstAttribute="height" constant="36" id="YtA-8d-5HR"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="LOS SANTOS-SANTANDER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1w6-UJ-e2q">
+                                                    <rect key="frame" x="52" y="9.5" width="540" height="19.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="18" id="s3A-zo-rn4"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                    <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Hace 8 horas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oA4-PO-OU0">
+                                                    <rect key="frame" x="52" y="29" width="540" height="12"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="12" id="Yuc-qR-7WO"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="0.53333333329999999" green="0.53333333329999999" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U7B-03-r6n">
+                                                    <rect key="frame" x="8" y="52" width="584" height="1"/>
+                                                    <color key="backgroundColor" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="mcg-0f-m1d"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="1w6-UJ-e2q" firstAttribute="leading" secondItem="meB-nL-gfB" secondAttribute="trailing" constant="8" id="0No-IB-h1v"/>
+                                                <constraint firstAttribute="bottom" secondItem="meB-nL-gfB" secondAttribute="bottom" constant="8" id="0rB-Rw-LFe"/>
+                                                <constraint firstItem="U7B-03-r6n" firstAttribute="leading" secondItem="s3q-AP-V1J" secondAttribute="leading" constant="8" id="2xm-mR-duC"/>
+                                                <constraint firstItem="meB-nL-gfB" firstAttribute="leading" secondItem="s3q-AP-V1J" secondAttribute="leading" constant="8" id="3uO-pZ-bZM"/>
+                                                <constraint firstItem="meB-nL-gfB" firstAttribute="top" secondItem="s3q-AP-V1J" secondAttribute="top" constant="8" id="66v-VO-79t"/>
+                                                <constraint firstAttribute="trailing" secondItem="oA4-PO-OU0" secondAttribute="trailing" constant="8" id="BGW-Hm-Bvf"/>
+                                                <constraint firstAttribute="trailing" secondItem="U7B-03-r6n" secondAttribute="trailing" constant="8" id="N9U-dc-bDZ"/>
+                                                <constraint firstItem="1w6-UJ-e2q" firstAttribute="top" secondItem="s3q-AP-V1J" secondAttribute="top" constant="9" id="PZn-y9-3xH"/>
+                                                <constraint firstItem="oA4-PO-OU0" firstAttribute="top" secondItem="1w6-UJ-e2q" secondAttribute="bottom" id="QVV-Qd-FKU"/>
+                                                <constraint firstAttribute="bottom" secondItem="oA4-PO-OU0" secondAttribute="bottom" constant="12" id="Xju-tG-Otv"/>
+                                                <constraint firstItem="oA4-PO-OU0" firstAttribute="leading" secondItem="meB-nL-gfB" secondAttribute="trailing" constant="8" id="cJF-Rn-paY"/>
+                                                <constraint firstAttribute="bottom" secondItem="U7B-03-r6n" secondAttribute="bottom" id="uqd-Jh-CvH"/>
+                                                <constraint firstAttribute="trailing" secondItem="1w6-UJ-e2q" secondAttribute="trailing" constant="8" id="xhm-mC-H1J"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="epicenter" destination="1w6-UJ-e2q" id="ggB-e3-OSR"/>
+                                            <outlet property="magnitude" destination="meB-nL-gfB" id="1vH-8x-SGS"/>
+                                            <outlet property="time" destination="oA4-PO-OU0" id="HEo-Pe-O7C"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="FlY-dK-Hew" id="AWL-aR-mil"/>
+                                    <outlet property="delegate" destination="FlY-dK-Hew" id="suj-BE-HuC"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="2aG-rn-5Wr" secondAttribute="trailing" id="4n3-ov-6b5"/>
+                            <constraint firstItem="z6Y-gX-d38" firstAttribute="top" secondItem="2aG-rn-5Wr" secondAttribute="bottom" id="F1z-qP-zXR"/>
+                            <constraint firstItem="2aG-rn-5Wr" firstAttribute="top" secondItem="gEE-2y-zYX" secondAttribute="bottom" id="joj-Nv-1R5"/>
+                            <constraint firstItem="2aG-rn-5Wr" firstAttribute="leading" secondItem="rbs-4D-dQW" secondAttribute="leading" id="yzP-Kd-Xjm"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Actividad sismica en Colombia" id="RpR-Lu-yIU"/>
                     <connections>
+                        <outlet property="tableView" destination="2aG-rn-5Wr" id="j0E-pd-b6N"/>
                         <segue destination="IsC-Lc-nsV" kind="show" identifier="home_seism_segue" id="rBp-6p-Jl8"/>
                         <segue destination="AyW-BW-ERI" kind="show" identifier="home_information_segue" id="Z5x-TQ-i9G"/>
                     </connections>

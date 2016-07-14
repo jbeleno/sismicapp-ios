@@ -67,8 +67,14 @@ final class DeviceViewModel {
     }
     
     // New session
-    func newSession(withDevice: String, withLatitude: Double, withLongitude: Double, withCity: String, withRegion: String, withCountry: String){
-        sismicappService.registerSession(withDevice: withDevice, withLatitude: withLatitude, withLongitude: withLongitude, withCity: withCity, withRegion: withRegion, withCountry: withCountry)
+    func newSession(withDevice device_token: String, withLatitude latitude: Double,
+                    withLongitude longitude: Double, withCity city: String, withRegion region: String,
+                        withCountry country: String){
+        
+        sismicappService.registerSession(withDevice: device_token, withLatitude: latitude,
+                                         withLongitude: longitude, withCity: city, withRegion: region,
+                                         withCountry: country)
+        
     }
     
     // Update location based on IP
@@ -78,8 +84,8 @@ final class DeviceViewModel {
     }
     
     // Update the push key
-    func updatePushKey(withDeviceToken: String, withPushKey: String) -> Observable<Bool>{
-        return sismicappService.updateDevicePushKey(withDevice: withDeviceToken, withPushKey: withPushKey).retry(3)
+    func updatePushKey(withDeviceToken device_token: String, withPushKey pushKey: String) -> Observable<Bool>{
+        return sismicappService.updateDevicePushKey(withDevice: device_token, withPushKey: pushKey).retry(3)
     }
     
 }
