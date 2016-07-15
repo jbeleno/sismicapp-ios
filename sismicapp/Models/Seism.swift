@@ -15,13 +15,15 @@ struct SeismListItem{
     let magnitude: Double
     let epicenter: String
     let time: String
+    let depth: String
     
     init?(json: JSON){
         guard let
             id = json["id"].string,
             magnitude = json["magnitude"].double,
             epicenter = json["epicenter"].string,
-            time = json["epicenter"].string
+            time = json["time"].string,
+            depth = json["depth"].string
         else{
             return nil
         }
@@ -30,6 +32,7 @@ struct SeismListItem{
         self.magnitude = magnitude
         self.epicenter = epicenter
         self.time = time
+        self.depth = depth
     }
 }
 

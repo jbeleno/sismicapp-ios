@@ -20,11 +20,7 @@ final class SeismListViewModel {
     
     private let seism_list: Observable<SeismList>
     
-    // Data for a table in the format of Array(SeismListItem).
-    // where each SeismListItem has id, epicenter, magnitude and time
-    var cellData: Observable<[SeismListItem]> {
-        return seism_list.map(self.cells)
-    }
+    let cellData: Observable<[SeismListItem]>
     
     
     //MARK: - Set up
@@ -36,18 +32,11 @@ final class SeismListViewModel {
         self.sismicappService = sismicappService
         
         let defaults = NSUserDefaults.standardUserDefaults()
-        let token = defaults.stringForKey("deviceToken")
+        let token = defaults.stringForKey("deviceToken") ?? ""
         
-        self.seism_list = self.sismicappService.all_seisms(withDevice: token!)
-    }
-    
-    
-    
-    //MARK: - Private methods
-    
-    ///Parses the seism list data into an array of seism list items.
-    private func cells(from seismList: SeismList)-> [SeismListItem] {
-        return seismList.list
+        self.seism_list = self.sismicappService.all_seisms(withDevice: token).shareReplay(1)
+        self.cellData = self.seism_list.map{$0.list}
+        
     }
 
 }

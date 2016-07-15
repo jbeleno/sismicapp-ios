@@ -37,11 +37,11 @@ class HomeController: UIViewController {
         super.viewDidLoad()
         
         // Setup some thing from the table
-        tableView.delegate = self
+        // tableView.delegate = self
         
         // Row sizes in the tableView
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 53.0
+        tableView.estimatedRowHeight = 52.0
         
         self.viewModel = SeismListViewModel(sismicappService: SismicappAPIService())
         addBindsToViewModel(viewModel)
@@ -97,9 +97,10 @@ extension HomeController: UITableViewDataSource, RxTableViewDataSourceType {
         cell.magnitude.text = String(data.magnitude)
         cell.epicenter.text = data.epicenter
         cell.time.text = data.time
+        cell.depth.text = data.depth
         
         return cell
     }
 }
 
-extension HomeController: UITableViewDelegate {}
+//extension HomeController: UITableViewDelegate {}
