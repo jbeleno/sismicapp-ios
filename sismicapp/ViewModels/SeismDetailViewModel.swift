@@ -8,6 +8,7 @@
 
 import UIKit
 import RxSwift
+import CoreLocation
 
 final class SeismViewModel {
     //MARK: - Dependecies
@@ -21,10 +22,9 @@ final class SeismViewModel {
     private let seism: Observable<Seism>
     
     let id: Observable<String>
-    let latitude: Observable<Double>
-    let longitude: Observable<Double>
     let title: Observable<String>
     let text: Observable<String>
+    let location: Observable<CLLocationCoordinate2D>
     
     
     //MARK: - Set up
@@ -40,10 +40,11 @@ final class SeismViewModel {
         
         self.seism = self.sismicappService.details_seism(withDevice: token, withSeismId: seism_id).shareReplay(1)
         self.id = self.seism.map{$0.id}
-        self.latitude = self.seism.map{$0.latitude}
-        self.longitude = self.seism.map{$0.longitude}
         self.title = self.seism.map{$0.title}
         self.text = self.seism.map{$0.text}
+        self.location = self.seism.map{
+            CLLocationCoordinate2DMake($0.latitude, $0.longitude)
+        }
     }
     
 }
