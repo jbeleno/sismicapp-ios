@@ -12,6 +12,7 @@ target 'sismicapp' do
     pod 'SwiftyJSON', '2.3.2'
     pod 'Alamofire', '~> 3.4.1'
     pod 'RxAlamofire', '~> 2.5'
+    pod 'Mapbox-iOS-SDK', '~> 3.2.2'
 end
 
 target 'sismicappTests' do

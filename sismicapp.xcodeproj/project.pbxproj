@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0D0624171D2C2B260051FDF0 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0624161D2C2B260051FDF0 /* Device.swift */; };
-		0D1FC3041D3179BA000B6E5A /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1FC3031D3179BA000B6E5A /* LocationService.swift */; };
 		0D249A4B1D2D703E00855178 /* DeviceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D249A4A1D2D703E00855178 /* DeviceViewModel.swift */; };
 		0D249A4D1D2D764400855178 /* IpInfoAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D249A4C1D2D764400855178 /* IpInfoAPIService.swift */; };
 		0D249A4F1D2D814E00855178 /* DeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D249A4E1D2D814E00855178 /* DeviceInfo.swift */; };
@@ -41,6 +40,7 @@
 		0DE34B4B1D36C92B00742793 /* SeismCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE34B4A1D36C92B00742793 /* SeismCell.swift */; };
 		0DE7278E1D3805B40006796D /* Seism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE7278D1D3805B40006796D /* Seism.swift */; };
 		0DE727901D3809BE0006796D /* SeismListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE7278F1D3809BE0006796D /* SeismListViewModel.swift */; };
+		0DFC0C591D395AB600DADCF9 /* SeismDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFC0C581D395AB600DADCF9 /* SeismDetailViewModel.swift */; };
 		0DFD00021D28783100DD0111 /* SismicappAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFD00011D28783100DD0111 /* SismicappAPIService.swift */; };
 		328867552653B782078C1AF3 /* Pods_sismicapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C274961A5E7AEC3E6D378FAA /* Pods_sismicapp.framework */; };
 		68E2D695139D900A8BE316C1 /* Pods_sismicappUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C0061A2D95E98941D3CB8AC /* Pods_sismicappUITests.framework */; };
@@ -67,7 +67,6 @@
 /* Begin PBXFileReference section */
 		0BB3F19778752E9214A01DD3 /* Pods-sismicappUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sismicappUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sismicappUITests/Pods-sismicappUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		0D0624161D2C2B260051FDF0 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Device.swift; path = Models/Device.swift; sourceTree = "<group>"; };
-		0D1FC3031D3179BA000B6E5A /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationService.swift; path = API/LocationService.swift; sourceTree = "<group>"; };
 		0D249A4A1D2D703E00855178 /* DeviceViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeviceViewModel.swift; path = ViewModels/DeviceViewModel.swift; sourceTree = "<group>"; };
 		0D249A4C1D2D764400855178 /* IpInfoAPIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IpInfoAPIService.swift; path = API/IpInfoAPIService.swift; sourceTree = "<group>"; };
 		0D249A4E1D2D814E00855178 /* DeviceInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeviceInfo.swift; path = Helpers/DeviceInfo.swift; sourceTree = "<group>"; };
@@ -106,6 +105,7 @@
 		0DE34B4A1D36C92B00742793 /* SeismCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SeismCell.swift; path = View/Cells/SeismCell.swift; sourceTree = "<group>"; };
 		0DE7278D1D3805B40006796D /* Seism.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Seism.swift; path = Models/Seism.swift; sourceTree = "<group>"; };
 		0DE7278F1D3809BE0006796D /* SeismListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SeismListViewModel.swift; path = ViewModels/SeismListViewModel.swift; sourceTree = "<group>"; };
+		0DFC0C581D395AB600DADCF9 /* SeismDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SeismDetailViewModel.swift; path = ViewModels/SeismDetailViewModel.swift; sourceTree = "<group>"; };
 		0DFD00011D28783100DD0111 /* SismicappAPIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SismicappAPIService.swift; path = API/SismicappAPIService.swift; sourceTree = "<group>"; };
 		55788E71FD09D340C2DCEDF6 /* Pods_sismicappTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sismicappTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C0061A2D95E98941D3CB8AC /* Pods_sismicappUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sismicappUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -251,6 +251,7 @@
 				0D249A4A1D2D703E00855178 /* DeviceViewModel.swift */,
 				0DE18D911D26F44300EF39E2 /* EmergencyServiceViewModel.swift */,
 				0DE7278F1D3809BE0006796D /* SeismListViewModel.swift */,
+				0DFC0C581D395AB600DADCF9 /* SeismDetailViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -269,7 +270,6 @@
 			children = (
 				0D249A4C1D2D764400855178 /* IpInfoAPIService.swift */,
 				0DFD00011D28783100DD0111 /* SismicappAPIService.swift */,
-				0D1FC3031D3179BA000B6E5A /* LocationService.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -569,8 +569,8 @@
 			files = (
 				0DE18D881D26DA9C00EF39E2 /* SettingsController.swift in Sources */,
 				0D4A762F1D2B3CF300C32907 /* Text.swift in Sources */,
-				0D1FC3041D3179BA000B6E5A /* LocationService.swift in Sources */,
 				0DE7278E1D3805B40006796D /* Seism.swift in Sources */,
+				0DFC0C591D395AB600DADCF9 /* SeismDetailViewModel.swift in Sources */,
 				0DE18D901D26F34D00EF39E2 /* EmergencyService.swift in Sources */,
 				0D0624171D2C2B260051FDF0 /* Device.swift in Sources */,
 				0DFD00021D28783100DD0111 /* SismicappAPIService.swift in Sources */,

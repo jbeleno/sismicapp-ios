@@ -28,8 +28,4 @@ class SeismCell: UITableViewCell {
         self.magnitude.layer.borderWidth = 2.0
     }
     
-    override func setSelected(selected: Bool, animated: Bool) {
-        // Configure the cell for selected state
-        // If there is nothing here not special transition
-    }
 }

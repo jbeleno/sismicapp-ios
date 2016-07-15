@@ -19,7 +19,6 @@ final class DeviceViewModel {
     
     private let sismicappService: SismicappAPIService
     private let ipInfoService: IpInfoAPIService
-    private var locationService: LocationService
     private let disposeBag = DisposeBag()
     
     
@@ -51,11 +50,6 @@ final class DeviceViewModel {
         
         // Request location from ip
         self.device_location = ipInfoService.getLocation().retry(3)
-        
-        // Request location from GPS
-        locationService = LocationService()
-        locationService.delegate = self
-        locationService.requestLocation()
     }
     
     //MARK: - Public methods
@@ -78,6 +72,7 @@ final class DeviceViewModel {
     }
     
     // Update location based on IP
+    
     func updateLocation() -> Observable<DeviceLocation>{
         self.device_location = ipInfoService.getLocation().retry(3)
         return self.device_location
@@ -88,19 +83,4 @@ final class DeviceViewModel {
         return sismicappService.updateDevicePushKey(withDevice: device_token, withPushKey: pushKey).retry(3)
     }
     
-}
-
-// MARK: LocationServiceDelegate
-extension DeviceViewModel: LocationServiceDelegate {
-    
-    func locationDidUpdate(service: LocationService, location: CLLocation) {
-        
-        let defaults = NSUserDefaults.standardUserDefaults()
-        let latitude = location.coordinate.latitude
-        let longitude = location.coordinate.longitude
-        
-        defaults.setDouble(latitude, forKey: "latitude")
-        defaults.setDouble(longitude, forKey: "longitude")
-        
-    }
 }

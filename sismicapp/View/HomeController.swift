@@ -22,6 +22,9 @@ class HomeController: UIViewController {
     private var viewModel: SeismListViewModel!
     private let disposeBag = DisposeBag()
     
+    private var seism_identifier = ""
+    private let segue_identifier = "home_seism_segue"
+    
     //MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
     
@@ -37,7 +40,7 @@ class HomeController: UIViewController {
         super.viewDidLoad()
         
         // Setup some thing from the table
-        // tableView.delegate = self
+        tableView.delegate = self
         
         // Row sizes in the tableView
         tableView.rowHeight = UITableViewAutomaticDimension
@@ -101,6 +104,24 @@ extension HomeController: UITableViewDataSource, RxTableViewDataSourceType {
         
         return cell
     }
+    
+    // If the user touch a cell, then go to another view to see details
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        // Select the seism list data from the array according the position in the table
+        let data = tableViewData?[indexPath.row]
+        self.seism_identifier = (data?.id)!
+        
+        self.performSegueWithIdentifier(segue_identifier, sender: self)
+    }
+    
+    // The seism identifier is passed to the detail view before call it
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if(segue.identifier == segue_identifier){
+            let view2load = segue.destinationViewController as! SeismController
+            view2load.seism_identifier = self.seism_identifier
+        }
+    }
 }
 
-//extension HomeController: UITableViewDelegate {}
+extension HomeController: UITableViewDelegate {}

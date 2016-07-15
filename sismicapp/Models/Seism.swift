@@ -9,6 +9,33 @@
 import Foundation
 import SwiftyJSON
 
+struct Seism{
+    let id: String
+    let latitude: Double
+    let longitude: Double
+    let title: String
+    let text: String
+    
+    init?(json: JSON){
+        
+        guard let
+            id = json["seism"]["id"].string,
+            latitude = json["seism"]["latitude"].double,
+            longitude = json["seism"]["longitude"].double,
+            title = json["seism"]["title"].string,
+            text = json["seism"]["text"].string
+        else{
+            print(json)
+            return nil
+        }
+        
+        self.id = id
+        self.latitude = latitude
+        self.longitude = longitude
+        self.title = title
+        self.text = text
+    }
+}
 
 struct SeismListItem{
     let id: String
@@ -41,7 +68,7 @@ struct SeismList {
     
     init?(json: JSON) {
         guard let seismsData = json["posts"].array else {
-                return nil
+            return nil
         }
         
         self.list = seismsData.flatMap(SeismListItem.init)

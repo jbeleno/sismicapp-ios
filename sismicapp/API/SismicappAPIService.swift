@@ -173,6 +173,29 @@ class SismicappAPIService {
         }
     }
     
+    func details_seism(withDevice device_token: String,
+                          withSeismId seism_id: String) -> Observable<Seism>{
+        
+        let params: [String: AnyObject] = [
+            "device_token": device_token,
+            "seism_id": seism_id
+        ]
+        
+        return request(.POST, ResourcePath.SeismDetail.path, parameters: params)
+            .rx_JSON()
+            .map(JSON.init)
+            .flatMap {
+                json -> Observable<Seism> in
+                guard let seism = Seism(json: json)
+                    where json["status"].string == "OK"
+                else {
+                        return Observable.error(APIError.CannotParse)
+                }
+                
+                return Observable.just(seism)
+        }
+    }
+    
     // [STOP seism_services]
     
     
