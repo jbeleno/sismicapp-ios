@@ -164,8 +164,8 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ph-h6-F5i">
-                                                <rect key="frame" x="8" y="294" width="584" height="0.0"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <rect key="frame" x="16" y="294" width="568" height="0.0"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -174,9 +174,9 @@
                                         <constraints>
                                             <constraint firstItem="Pp1-TJ-UoP" firstAttribute="leading" secondItem="gJx-vQ-TFu" secondAttribute="leading" constant="8" id="5po-ce-1jg"/>
                                             <constraint firstItem="2Ph-h6-F5i" firstAttribute="top" secondItem="Pp1-TJ-UoP" secondAttribute="bottom" constant="8" id="6K8-bz-BRb"/>
-                                            <constraint firstItem="2Ph-h6-F5i" firstAttribute="leading" secondItem="gJx-vQ-TFu" secondAttribute="leading" constant="8" id="9I4-ex-O4Y"/>
+                                            <constraint firstItem="2Ph-h6-F5i" firstAttribute="leading" secondItem="gJx-vQ-TFu" secondAttribute="leading" constant="16" id="9I4-ex-O4Y"/>
                                             <constraint firstItem="LGC-l3-OUu" firstAttribute="top" secondItem="gJx-vQ-TFu" secondAttribute="top" id="Hke-82-Oem"/>
-                                            <constraint firstAttribute="trailing" secondItem="2Ph-h6-F5i" secondAttribute="trailing" constant="8" id="LKm-Gm-2dK"/>
+                                            <constraint firstAttribute="trailing" secondItem="2Ph-h6-F5i" secondAttribute="trailing" constant="16" id="LKm-Gm-2dK"/>
                                             <constraint firstAttribute="trailing" secondItem="Pp1-TJ-UoP" secondAttribute="trailing" constant="8" id="W6x-Nz-J6w"/>
                                             <constraint firstItem="Pp1-TJ-UoP" firstAttribute="top" secondItem="LGC-l3-OUu" secondAttribute="bottom" constant="16" id="YWA-OT-fSr"/>
                                             <constraint firstItem="LGC-l3-OUu" firstAttribute="leading" secondItem="gJx-vQ-TFu" secondAttribute="leading" id="reF-s8-gUg"/>
@@ -206,7 +206,11 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="lVf-Bq-Ajn">
-                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="oMO-Vi-wef"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="oMO-Vi-wef">
+                            <connections>
+                                <action selector="shareSeism:" destination="IsC-Lc-nsV" id="C5L-cM-ldc"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>

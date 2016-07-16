@@ -15,6 +15,7 @@ struct Seism{
     let longitude: Double
     let title: String
     let text: String
+    let text2share: String
     
     init?(json: JSON){
         
@@ -23,7 +24,8 @@ struct Seism{
             latitude = json["seism"]["latitude"].double,
             longitude = json["seism"]["longitude"].double,
             title = json["seism"]["title"].string,
-            text = json["seism"]["text"].string
+            text = json["seism"]["text"].string,
+            text2share = json["seism"]["text_to_share"].string
         else{
             print(json)
             return nil
@@ -34,6 +36,7 @@ struct Seism{
         self.longitude = longitude
         self.title = title
         self.text = text
+        self.text2share = text2share
     }
 }
 

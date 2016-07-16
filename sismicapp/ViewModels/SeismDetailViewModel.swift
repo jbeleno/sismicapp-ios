@@ -24,6 +24,7 @@ final class SeismViewModel {
     let id: Observable<String>
     let title: Observable<String>
     let text: Observable<String>
+    let text2share: Observable<String>
     let location: Observable<CLLocationCoordinate2D>
     
     
@@ -42,6 +43,7 @@ final class SeismViewModel {
         self.id = self.seism.map{$0.id}
         self.title = self.seism.map{$0.title}
         self.text = self.seism.map{$0.text}
+        self.text2share = self.seism.map{$0.text2share}
         self.location = self.seism.map{
             CLLocationCoordinate2DMake($0.latitude, $0.longitude)
         }
