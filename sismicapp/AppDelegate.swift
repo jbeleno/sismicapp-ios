@@ -107,7 +107,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 .device_location
                 .observeOn(MainScheduler.instance)
                 .subscribeNext{ dev_loc in
-                    print("ENTRA")
                     let latitude = dev_loc.latitude
                     let longitude = dev_loc.longitude
                     let country = dev_loc.country

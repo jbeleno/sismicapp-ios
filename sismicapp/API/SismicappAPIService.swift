@@ -149,6 +149,40 @@ class SismicappAPIService {
     
     
     
+    // [START report_services]
+    
+    // Report a seism sending location and user information
+    func report_seism(withDevice device_token: String,
+                        withLatitude latitude: Double,
+                      withLongitude longitude: Double,
+                                withCity city: String,
+                            withRegion region: String,
+                          withCountry country: String) -> Observable<Bool>{
+        
+        let params: [String: AnyObject] = [
+            "device_token": device_token,
+            "latitude": latitude,
+            "longitude": longitude,
+            "city": city,
+            "region": region,
+            "country": country
+        ]
+        
+        return request(.POST, ResourcePath.ReportNew.path, parameters: params)
+            .rx_JSON()
+            .map(JSON.init)
+            .flatMap {
+                json -> Observable<Bool> in
+                let response_status = true
+                
+                return Observable.just(response_status)
+        }
+    }
+    
+    // [END report_services]
+    
+    
+    
     // [START seism_services]
     
     // Get a list from the last 20 seisms in Colombia

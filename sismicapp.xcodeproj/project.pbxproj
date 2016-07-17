@@ -25,6 +25,7 @@
 		0DB4E9F51D333762002690EA /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DB4E9EF1D333762002690EA /* RxCocoa.framework */; };
 		0DB4E9F61D333762002690EA /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DB4E9F01D333762002690EA /* RxSwift.framework */; };
 		0DB4E9F71D333762002690EA /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DB4E9F11D333762002690EA /* SwiftyJSON.framework */; };
+		0DD2FFC11D3C248F009CA346 /* ReportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD2FFC01D3C248F009CA346 /* ReportViewModel.swift */; };
 		0DDD2A331D1351EA002BC775 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0DDD2A321D1351EA002BC775 /* GoogleService-Info.plist */; };
 		0DE18D811D26DA9C00EF39E2 /* EmergencyNumbersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE18D781D26DA9C00EF39E2 /* EmergencyNumbersController.swift */; };
 		0DE18D821D26DA9C00EF39E2 /* FeedbackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE18D791D26DA9C00EF39E2 /* FeedbackController.swift */; };
@@ -90,6 +91,7 @@
 		0DB4E9EF1D333762002690EA /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = "../../Library/Developer/Xcode/DerivedData/sismicapp-givqarzhpxudxcddnstqkcczgzau/Build/Products/Debug-iphonesimulator/RxCocoa/RxCocoa.framework"; sourceTree = "<group>"; };
 		0DB4E9F01D333762002690EA /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = "../../Library/Developer/Xcode/DerivedData/sismicapp-givqarzhpxudxcddnstqkcczgzau/Build/Products/Debug-iphonesimulator/RxSwift/RxSwift.framework"; sourceTree = "<group>"; };
 		0DB4E9F11D333762002690EA /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../Library/Developer/Xcode/DerivedData/sismicapp-givqarzhpxudxcddnstqkcczgzau/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
+		0DD2FFC01D3C248F009CA346 /* ReportViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReportViewModel.swift; path = ViewModels/ReportViewModel.swift; sourceTree = "<group>"; };
 		0DDD2A321D1351EA002BC775 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0DE18D781D26DA9C00EF39E2 /* EmergencyNumbersController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmergencyNumbersController.swift; path = View/EmergencyNumbersController.swift; sourceTree = "<group>"; };
 		0DE18D791D26DA9C00EF39E2 /* FeedbackController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedbackController.swift; path = View/FeedbackController.swift; sourceTree = "<group>"; };
@@ -250,8 +252,9 @@
 			children = (
 				0D249A4A1D2D703E00855178 /* DeviceViewModel.swift */,
 				0DE18D911D26F44300EF39E2 /* EmergencyServiceViewModel.swift */,
-				0DE7278F1D3809BE0006796D /* SeismListViewModel.swift */,
 				0DFC0C581D395AB600DADCF9 /* SeismDetailViewModel.swift */,
+				0DE7278F1D3809BE0006796D /* SeismListViewModel.swift */,
+				0DD2FFC01D3C248F009CA346 /* ReportViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -567,6 +570,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DD2FFC11D3C248F009CA346 /* ReportViewModel.swift in Sources */,
 				0DE18D881D26DA9C00EF39E2 /* SettingsController.swift in Sources */,
 				0D4A762F1D2B3CF300C32907 /* Text.swift in Sources */,
 				0DE7278E1D3805B40006796D /* Seism.swift in Sources */,

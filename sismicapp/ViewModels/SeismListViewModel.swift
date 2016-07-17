@@ -34,7 +34,10 @@ final class SeismListViewModel {
         let defaults = NSUserDefaults.standardUserDefaults()
         let token = defaults.stringForKey("deviceToken") ?? ""
         
-        self.seism_list = self.sismicappService.all_seisms(withDevice: token).shareReplay(1)
+        self.seism_list = self.sismicappService
+                              .all_seisms(withDevice: token)
+                              .retry(3)
+                              .shareReplay(1)
         self.cellData = self.seism_list.map{$0.list}
         
     }
