@@ -34,6 +34,7 @@ class SismicappAPIService {
         case DeviceUpdatePushKey = "device/update_push_key/"
         case DeviceUpdateSettings = "device/update_settings/"
         case FeedbackNew = "feedback/add/"
+        case NotificationList = "notification/all/"
         case ReportNew = "report/add/"
         case SeismList = "seism/all/"
         case SeismDetail = "seism/detail/"
@@ -149,6 +150,34 @@ class SismicappAPIService {
     
     
     
+    // [START notification_services]
+    
+    // Get a list from the last 20 seisms in Colombia
+    func all_notifications(withDevice device_token: String) -> Observable<NotificationList>{
+        
+        let params: [String: AnyObject] = [
+            "device_token": device_token
+        ]
+        
+        return request(.POST, ResourcePath.NotificationList.path, parameters: params)
+            .rx_JSON()
+            .map(JSON.init)
+            .flatMap {
+                json -> Observable<NotificationList> in
+                guard let seisms = NotificationList(json: json)
+                    where json["status"].string == "OK"
+                    else {
+                        return Observable.error(APIError.CannotParse)
+                }
+                
+                return Observable.just(seisms)
+        }
+    }
+    
+    // [STOP notification_services]
+
+    
+    
     // [START report_services]
     
     // Report a seism sending location and user information
@@ -207,6 +236,7 @@ class SismicappAPIService {
         }
     }
     
+    // Get a seism details
     func details_seism(withDevice device_token: String,
                           withSeismId seism_id: String) -> Observable<Seism>{
         

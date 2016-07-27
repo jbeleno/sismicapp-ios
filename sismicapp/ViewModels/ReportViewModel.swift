@@ -65,8 +65,6 @@ final class ReportViewModel {
                                     let region = dev_loc.region
                                     let city = dev_loc.city
                                     
-                                    print(token)
-                                    
                                     // Gambiarra ~ Machetazo
                                     sismicappService.report_seism(withDevice: token, withLatitude: latitude,
                                                                          withLongitude: longitude, withCity: city,

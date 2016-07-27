@@ -11,6 +11,10 @@
 		0D249A4B1D2D703E00855178 /* DeviceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D249A4A1D2D703E00855178 /* DeviceViewModel.swift */; };
 		0D249A4D1D2D764400855178 /* IpInfoAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D249A4C1D2D764400855178 /* IpInfoAPIService.swift */; };
 		0D249A4F1D2D814E00855178 /* DeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D249A4E1D2D814E00855178 /* DeviceInfo.swift */; };
+		0D341D681D4846C400CAAF58 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D341D671D4846C400CAAF58 /* Notification.swift */; };
+		0D341D6A1D484C8600CAAF58 /* NotificationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D341D691D484C8600CAAF58 /* NotificationListViewModel.swift */; };
+		0D341D6C1D48529500CAAF58 /* NotificationNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D341D6B1D48529500CAAF58 /* NotificationNormalCell.swift */; };
+		0D341D6E1D4852B200CAAF58 /* NotificationUnreadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D341D6D1D4852B200CAAF58 /* NotificationUnreadCell.swift */; };
 		0D4A762F1D2B3CF300C32907 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4A762E1D2B3CF300C32907 /* Text.swift */; };
 		0D4A76311D2B3D8800C32907 /* UIViewController+presentError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4A76301D2B3D8800C32907 /* UIViewController+presentError.swift */; };
 		0D5D713A1CECD12F000125FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5D71391CECD12F000125FC /* AppDelegate.swift */; };
@@ -71,6 +75,10 @@
 		0D249A4A1D2D703E00855178 /* DeviceViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeviceViewModel.swift; path = ViewModels/DeviceViewModel.swift; sourceTree = "<group>"; };
 		0D249A4C1D2D764400855178 /* IpInfoAPIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IpInfoAPIService.swift; path = API/IpInfoAPIService.swift; sourceTree = "<group>"; };
 		0D249A4E1D2D814E00855178 /* DeviceInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeviceInfo.swift; path = Helpers/DeviceInfo.swift; sourceTree = "<group>"; };
+		0D341D671D4846C400CAAF58 /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Notification.swift; path = Models/Notification.swift; sourceTree = "<group>"; };
+		0D341D691D484C8600CAAF58 /* NotificationListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotificationListViewModel.swift; path = ViewModels/NotificationListViewModel.swift; sourceTree = "<group>"; };
+		0D341D6B1D48529500CAAF58 /* NotificationNormalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotificationNormalCell.swift; path = View/Cells/NotificationNormalCell.swift; sourceTree = "<group>"; };
+		0D341D6D1D4852B200CAAF58 /* NotificationUnreadCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotificationUnreadCell.swift; path = View/Cells/NotificationUnreadCell.swift; sourceTree = "<group>"; };
 		0D4A762E1D2B3CF300C32907 /* Text.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Text.swift; path = Helpers/Text.swift; sourceTree = "<group>"; };
 		0D4A76301D2B3D8800C32907 /* UIViewController+presentError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+presentError.swift"; path = "View/UIViewController+presentError.swift"; sourceTree = "<group>"; };
 		0D5D71361CECD12E000125FC /* sismicapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sismicapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -243,6 +251,7 @@
 				0D0624161D2C2B260051FDF0 /* Device.swift */,
 				0DE18D8F1D26F34D00EF39E2 /* EmergencyService.swift */,
 				0DE7278D1D3805B40006796D /* Seism.swift */,
+				0D341D671D4846C400CAAF58 /* Notification.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -255,6 +264,7 @@
 				0DFC0C581D395AB600DADCF9 /* SeismDetailViewModel.swift */,
 				0DE7278F1D3809BE0006796D /* SeismListViewModel.swift */,
 				0DD2FFC01D3C248F009CA346 /* ReportViewModel.swift */,
+				0D341D691D484C8600CAAF58 /* NotificationListViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -264,6 +274,8 @@
 			children = (
 				0DE18D8C1D26DCAF00EF39E2 /* PhoneNumbersCell.swift */,
 				0DE34B4A1D36C92B00742793 /* SeismCell.swift */,
+				0D341D6B1D48529500CAAF58 /* NotificationNormalCell.swift */,
+				0D341D6D1D4852B200CAAF58 /* NotificationUnreadCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -586,12 +598,16 @@
 				0DE18D8D1D26DCAF00EF39E2 /* PhoneNumbersCell.swift in Sources */,
 				0DE18D831D26DA9C00EF39E2 /* HomeController.swift in Sources */,
 				0DE18D921D26F44300EF39E2 /* EmergencyServiceViewModel.swift in Sources */,
+				0D341D681D4846C400CAAF58 /* Notification.swift in Sources */,
+				0D341D6E1D4852B200CAAF58 /* NotificationUnreadCell.swift in Sources */,
 				0D4A76311D2B3D8800C32907 /* UIViewController+presentError.swift in Sources */,
+				0D341D6C1D48529500CAAF58 /* NotificationNormalCell.swift in Sources */,
 				0DE18D821D26DA9C00EF39E2 /* FeedbackController.swift in Sources */,
 				0DE18D851D26DA9C00EF39E2 /* NotificationsController.swift in Sources */,
 				0DE727901D3809BE0006796D /* SeismListViewModel.swift in Sources */,
 				0D249A4D1D2D764400855178 /* IpInfoAPIService.swift in Sources */,
 				0DE18D841D26DA9C00EF39E2 /* InformationController.swift in Sources */,
+				0D341D6A1D484C8600CAAF58 /* NotificationListViewModel.swift in Sources */,
 				0D5D713A1CECD12F000125FC /* AppDelegate.swift in Sources */,
 				0DE18D861D26DA9C00EF39E2 /* RedButtonController.swift in Sources */,
 			);
