@@ -150,6 +150,36 @@ class SismicappAPIService {
     
     
     
+    // [START information_services]
+    
+    // Get a information details
+    func details_information(        withDevice device_token: String,
+                            withInformationId information_id: String) -> Observable<Information>{
+        
+        let params: [String: AnyObject] = [
+            "device_token": device_token,
+            "information_id": information_id
+        ]
+        
+        return request(.POST, ResourcePath.SeismDetail.path, parameters: params)
+            .rx_JSON()
+            .map(JSON.init)
+            .flatMap {
+                json -> Observable<Information> in
+                guard let information = Information(json: json)
+                    where json["status"].string == "OK"
+                    else {
+                        return Observable.error(APIError.CannotParse)
+                }
+                
+                return Observable.just(information)
+        }
+    }
+    
+    // [STOP information_services]
+    
+    
+    
     // [START notification_services]
     
     // Get a list from the last 20 seisms in Colombia

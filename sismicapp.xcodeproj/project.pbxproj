@@ -30,6 +30,8 @@
 		0DB4E9F61D333762002690EA /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DB4E9F01D333762002690EA /* RxSwift.framework */; };
 		0DB4E9F71D333762002690EA /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DB4E9F11D333762002690EA /* SwiftyJSON.framework */; };
 		0DD2FFC11D3C248F009CA346 /* ReportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD2FFC01D3C248F009CA346 /* ReportViewModel.swift */; };
+		0DDCBFF41D5255BF0073EB22 /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDCBFF31D5255BF0073EB22 /* Information.swift */; };
+		0DDCBFF61D5257690073EB22 /* InformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDCBFF51D5257690073EB22 /* InformationViewModel.swift */; };
 		0DDD2A331D1351EA002BC775 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0DDD2A321D1351EA002BC775 /* GoogleService-Info.plist */; };
 		0DE18D811D26DA9C00EF39E2 /* EmergencyNumbersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE18D781D26DA9C00EF39E2 /* EmergencyNumbersController.swift */; };
 		0DE18D821D26DA9C00EF39E2 /* FeedbackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE18D791D26DA9C00EF39E2 /* FeedbackController.swift */; };
@@ -100,6 +102,8 @@
 		0DB4E9F01D333762002690EA /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = "../../Library/Developer/Xcode/DerivedData/sismicapp-givqarzhpxudxcddnstqkcczgzau/Build/Products/Debug-iphonesimulator/RxSwift/RxSwift.framework"; sourceTree = "<group>"; };
 		0DB4E9F11D333762002690EA /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../Library/Developer/Xcode/DerivedData/sismicapp-givqarzhpxudxcddnstqkcczgzau/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		0DD2FFC01D3C248F009CA346 /* ReportViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReportViewModel.swift; path = ViewModels/ReportViewModel.swift; sourceTree = "<group>"; };
+		0DDCBFF31D5255BF0073EB22 /* Information.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Information.swift; path = Models/Information.swift; sourceTree = "<group>"; };
+		0DDCBFF51D5257690073EB22 /* InformationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InformationViewModel.swift; path = ViewModels/InformationViewModel.swift; sourceTree = "<group>"; };
 		0DDD2A321D1351EA002BC775 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0DE18D781D26DA9C00EF39E2 /* EmergencyNumbersController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmergencyNumbersController.swift; path = View/EmergencyNumbersController.swift; sourceTree = "<group>"; };
 		0DE18D791D26DA9C00EF39E2 /* FeedbackController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedbackController.swift; path = View/FeedbackController.swift; sourceTree = "<group>"; };
@@ -250,8 +254,9 @@
 			children = (
 				0D0624161D2C2B260051FDF0 /* Device.swift */,
 				0DE18D8F1D26F34D00EF39E2 /* EmergencyService.swift */,
-				0DE7278D1D3805B40006796D /* Seism.swift */,
+				0DDCBFF31D5255BF0073EB22 /* Information.swift */,
 				0D341D671D4846C400CAAF58 /* Notification.swift */,
+				0DE7278D1D3805B40006796D /* Seism.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -261,10 +266,11 @@
 			children = (
 				0D249A4A1D2D703E00855178 /* DeviceViewModel.swift */,
 				0DE18D911D26F44300EF39E2 /* EmergencyServiceViewModel.swift */,
+				0DDCBFF51D5257690073EB22 /* InformationViewModel.swift */,
+				0D341D691D484C8600CAAF58 /* NotificationListViewModel.swift */,
 				0DFC0C581D395AB600DADCF9 /* SeismDetailViewModel.swift */,
 				0DE7278F1D3809BE0006796D /* SeismListViewModel.swift */,
 				0DD2FFC01D3C248F009CA346 /* ReportViewModel.swift */,
-				0D341D691D484C8600CAAF58 /* NotificationListViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -595,6 +601,7 @@
 				0D249A4B1D2D703E00855178 /* DeviceViewModel.swift in Sources */,
 				0DE18D811D26DA9C00EF39E2 /* EmergencyNumbersController.swift in Sources */,
 				0D249A4F1D2D814E00855178 /* DeviceInfo.swift in Sources */,
+				0DDCBFF61D5257690073EB22 /* InformationViewModel.swift in Sources */,
 				0DE18D8D1D26DCAF00EF39E2 /* PhoneNumbersCell.swift in Sources */,
 				0DE18D831D26DA9C00EF39E2 /* HomeController.swift in Sources */,
 				0DE18D921D26F44300EF39E2 /* EmergencyServiceViewModel.swift in Sources */,
@@ -602,6 +609,7 @@
 				0D341D6E1D4852B200CAAF58 /* NotificationUnreadCell.swift in Sources */,
 				0D4A76311D2B3D8800C32907 /* UIViewController+presentError.swift in Sources */,
 				0D341D6C1D48529500CAAF58 /* NotificationNormalCell.swift in Sources */,
+				0DDCBFF41D5255BF0073EB22 /* Information.swift in Sources */,
 				0DE18D821D26DA9C00EF39E2 /* FeedbackController.swift in Sources */,
 				0DE18D851D26DA9C00EF39E2 /* NotificationsController.swift in Sources */,
 				0DE727901D3809BE0006796D /* SeismListViewModel.swift in Sources */,
