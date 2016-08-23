@@ -848,7 +848,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TAK-eu-AP1">
                                                 <rect key="frame" x="0.0" y="78" width="600" height="44"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Magnitud" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ne-Q8-Fmn">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Magnitud: 4.0 Mw" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ne-Q8-Fmn">
                                                         <rect key="frame" x="16" y="11" width="120" height="21"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="21" id="R82-CZ-fa6"/>
@@ -865,6 +865,9 @@
                                                             <constraint firstAttribute="height" constant="30" id="blU-CZ-Otg"/>
                                                             <constraint firstAttribute="width" constant="124" id="e3M-u2-UpT"/>
                                                         </constraints>
+                                                        <connections>
+                                                            <action selector="magnitudeChanged:" destination="7tS-7o-fTA" eventType="valueChanged" id="t8z-tc-TTI"/>
+                                                        </connections>
                                                     </slider>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -879,7 +882,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rWo-S5-age">
                                                 <rect key="frame" x="0.0" y="124" width="600" height="44"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rango" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w18-xu-yd4">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rango: 1800km" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w18-xu-yd4">
                                                         <rect key="frame" x="16" y="11" width="120" height="21"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="120" id="TRl-4V-NXB"/>
@@ -896,6 +899,9 @@
                                                             <constraint firstAttribute="height" constant="30" id="U0I-yh-GbX"/>
                                                             <constraint firstAttribute="width" constant="128" id="wah-oC-XcO"/>
                                                         </constraints>
+                                                        <connections>
+                                                            <action selector="rangeChanged:" destination="7tS-7o-fTA" eventType="valueChanged" id="ygP-MF-LAL"/>
+                                                        </connections>
                                                     </slider>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1027,6 +1033,12 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="KVo-73-nLp"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="lbl_magnitude" destination="6ne-Q8-Fmn" id="kfp-SK-1H7"/>
+                        <outlet property="lbl_range" destination="w18-xu-yd4" id="jLa-jf-uoA"/>
+                        <outlet property="slider_magnitude" destination="S6M-qB-g4g" id="VLv-Se-Dh4"/>
+                        <outlet property="slider_range" destination="INe-DD-POf" id="ssn-YR-aeQ"/>
+                        <outlet property="sw_notifications" destination="cF3-X8-fz3" id="903-xI-Uh8"/>
+                        <outlet property="view_feedback" destination="0yE-kS-3vb" id="mXA-22-e6p"/>
                         <segue destination="X5b-fY-83F" kind="show" identifier="feedback_segue" id="uLV-0S-mYz"/>
                     </connections>
                 </viewController>
