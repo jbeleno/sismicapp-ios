@@ -357,5 +357,35 @@ class SismicappAPIService {
         }
     }
     
+    // Update the device settings
+    func updateSettings( withDevice device_token: String,
+                         withMagnitude magnitude: Double,
+                                 withRange range: Double,
+                        withAreNotificationsOn areNotificationsOn: String) -> Observable<Bool> {
+        
+        let params: [String: AnyObject] = [
+            "device_token": device_token,
+            "magnitude": magnitude,
+            "range": range,
+            "notifications": areNotificationsOn,
+            "app_version": Constants.version
+        ]
+        
+        
+        return request(.POST, ResourcePath.DeviceUpdateSettings.path, parameters: params)
+            .rx_JSON()
+            .map(JSON.init)
+            .flatMap {
+                json -> Observable<Bool> in
+                guard let status: Bool = true
+                    where json["status"].string == "OK"
+                    else {
+                        return Observable.error(APIError.CannotParse)
+                }
+                
+                return Observable.just(status)
+        }
+    }
+    
     // [STOP settings_services]
 }
