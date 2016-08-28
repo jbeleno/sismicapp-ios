@@ -17,6 +17,7 @@
 		0D341D6E1D4852B200CAAF58 /* NotificationUnreadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D341D6D1D4852B200CAAF58 /* NotificationUnreadCell.swift */; };
 		0D4A762F1D2B3CF300C32907 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4A762E1D2B3CF300C32907 /* Text.swift */; };
 		0D4A76311D2B3D8800C32907 /* UIViewController+presentError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4A76301D2B3D8800C32907 /* UIViewController+presentError.swift */; };
+		0D56ACBA1D732DDF00BAD959 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D56ACB91D732DDF00BAD959 /* Settings.swift */; };
 		0D5D713A1CECD12F000125FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5D71391CECD12F000125FC /* AppDelegate.swift */; };
 		0D5D71411CECD12F000125FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D5D713F1CECD12F000125FC /* Main.storyboard */; };
 		0D5D71431CECD12F000125FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D5D71421CECD12F000125FC /* Assets.xcassets */; };
@@ -83,6 +84,7 @@
 		0D341D6D1D4852B200CAAF58 /* NotificationUnreadCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotificationUnreadCell.swift; path = View/Cells/NotificationUnreadCell.swift; sourceTree = "<group>"; };
 		0D4A762E1D2B3CF300C32907 /* Text.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Text.swift; path = Helpers/Text.swift; sourceTree = "<group>"; };
 		0D4A76301D2B3D8800C32907 /* UIViewController+presentError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+presentError.swift"; path = "View/UIViewController+presentError.swift"; sourceTree = "<group>"; };
+		0D56ACB91D732DDF00BAD959 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Settings.swift; path = Models/Settings.swift; sourceTree = "<group>"; };
 		0D5D71361CECD12E000125FC /* sismicapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sismicapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D5D71391CECD12F000125FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0D5D71401CECD12F000125FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -257,6 +259,7 @@
 				0DDCBFF31D5255BF0073EB22 /* Information.swift */,
 				0D341D671D4846C400CAAF58 /* Notification.swift */,
 				0DE7278D1D3805B40006796D /* Seism.swift */,
+				0D56ACB91D732DDF00BAD959 /* Settings.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -609,6 +612,7 @@
 				0D341D6E1D4852B200CAAF58 /* NotificationUnreadCell.swift in Sources */,
 				0D4A76311D2B3D8800C32907 /* UIViewController+presentError.swift in Sources */,
 				0D341D6C1D48529500CAAF58 /* NotificationNormalCell.swift in Sources */,
+				0D56ACBA1D732DDF00BAD959 /* Settings.swift in Sources */,
 				0DDCBFF41D5255BF0073EB22 /* Information.swift in Sources */,
 				0DE18D821D26DA9C00EF39E2 /* FeedbackController.swift in Sources */,
 				0DE18D851D26DA9C00EF39E2 /* NotificationsController.swift in Sources */,

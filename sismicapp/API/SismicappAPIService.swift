@@ -331,4 +331,31 @@ class SismicappAPIService {
     }
     
     // [END session_services]
+    
+    
+    // [START settings_services]
+    
+    // Get the device settings
+    func load_settings(withDevice device_token: String) -> Observable<Settings>{
+        
+        let params: [String: AnyObject] = [
+            "device_token": device_token
+        ]
+        
+        return request(.POST, ResourcePath.DeviceLoadSettings.path, parameters: params)
+            .rx_JSON()
+            .map(JSON.init)
+            .flatMap {
+                json -> Observable<Settings> in
+                guard let settings = Settings(json: json)
+                    where json["status"].string == "OK"
+                    else {
+                        return Observable.error(APIError.CannotParse)
+                }
+                
+                return Observable.just(settings)
+        }
+    }
+    
+    // [STOP settings_services]
 }

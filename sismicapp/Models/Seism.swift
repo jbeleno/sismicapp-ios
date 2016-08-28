@@ -27,7 +27,6 @@ struct Seism{
             text = json["seism"]["text"].string,
             text2share = json["seism"]["text_to_share"].string
         else{
-            print(json)
             return nil
         }
         
