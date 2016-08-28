@@ -24,6 +24,7 @@
 		0D5D71461CECD12F000125FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D5D71441CECD12F000125FC /* LaunchScreen.storyboard */; };
 		0D5D71511CECD12F000125FC /* sismicappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5D71501CECD12F000125FC /* sismicappTests.swift */; };
 		0D5D715C1CECD12F000125FC /* sismicappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5D715B1CECD12F000125FC /* sismicappUITests.swift */; };
+		0D7E6CDE1D73AE0400B1EDCD /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7E6CDD1D73AE0400B1EDCD /* SettingsViewModel.swift */; };
 		0DB4E9F21D333762002690EA /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DB4E9EC1D333762002690EA /* Alamofire.framework */; };
 		0DB4E9F31D333762002690EA /* RxAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DB4E9ED1D333762002690EA /* RxAlamofire.framework */; };
 		0DB4E9F41D333762002690EA /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DB4E9EE1D333762002690EA /* RxBlocking.framework */; };
@@ -97,6 +98,7 @@
 		0D5D71571CECD12F000125FC /* sismicappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sismicappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D5D715B1CECD12F000125FC /* sismicappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sismicappUITests.swift; sourceTree = "<group>"; };
 		0D5D715D1CECD12F000125FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D7E6CDD1D73AE0400B1EDCD /* SettingsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewModel.swift; path = ViewModels/SettingsViewModel.swift; sourceTree = "<group>"; };
 		0DB4E9EC1D333762002690EA /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../Library/Developer/Xcode/DerivedData/sismicapp-givqarzhpxudxcddnstqkcczgzau/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 		0DB4E9ED1D333762002690EA /* RxAlamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxAlamofire.framework; path = "../../Library/Developer/Xcode/DerivedData/sismicapp-givqarzhpxudxcddnstqkcczgzau/Build/Products/Debug-iphonesimulator/RxAlamofire/RxAlamofire.framework"; sourceTree = "<group>"; };
 		0DB4E9EE1D333762002690EA /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = "../../Library/Developer/Xcode/DerivedData/sismicapp-givqarzhpxudxcddnstqkcczgzau/Build/Products/Debug-iphonesimulator/RxBlocking/RxBlocking.framework"; sourceTree = "<group>"; };
@@ -274,6 +276,7 @@
 				0DFC0C581D395AB600DADCF9 /* SeismDetailViewModel.swift */,
 				0DE7278F1D3809BE0006796D /* SeismListViewModel.swift */,
 				0DD2FFC01D3C248F009CA346 /* ReportViewModel.swift */,
+				0D7E6CDD1D73AE0400B1EDCD /* SettingsViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -606,6 +609,7 @@
 				0D249A4F1D2D814E00855178 /* DeviceInfo.swift in Sources */,
 				0DDCBFF61D5257690073EB22 /* InformationViewModel.swift in Sources */,
 				0DE18D8D1D26DCAF00EF39E2 /* PhoneNumbersCell.swift in Sources */,
+				0D7E6CDE1D73AE0400B1EDCD /* SettingsViewModel.swift in Sources */,
 				0DE18D831D26DA9C00EF39E2 /* HomeController.swift in Sources */,
 				0DE18D921D26F44300EF39E2 /* EmergencyServiceViewModel.swift in Sources */,
 				0D341D681D4846C400CAAF58 /* Notification.swift in Sources */,

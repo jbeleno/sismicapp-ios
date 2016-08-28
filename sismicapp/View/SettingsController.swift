@@ -15,8 +15,8 @@ class SettingsController: UIViewController {
     
     //MARK: - Dependencies
     
-    //private var viewModel: InformationViewModel!
-    //private let disposeBag = DisposeBag()
+    private var viewModel: SettingsViewModel!
+    private let disposeBag = DisposeBag()
     
     private var segue_identifier = "feedback_segue"
     
