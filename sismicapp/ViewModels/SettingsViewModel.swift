@@ -20,8 +20,10 @@ final class SettingsViewModel {
     
     private let settings: Observable<Settings>
     
-    let magnitude: Observable<Double>
-    let range: Observable<Double>
+    let magnitude: Observable<Float>
+    let range: Observable<Float>
+    let magnitude_txt: Observable<String>
+    let range_txt: Observable<String>
     let areNotificationsOn: Observable<Bool>
     
     //MARK: - Set up
@@ -39,8 +41,11 @@ final class SettingsViewModel {
             .load_settings(withDevice: token)
             .retry(3)
             .shareReplay(1)
-        self.magnitude = self.settings.map{$0.magnitude}
-        self.range = self.settings.map{$0.range}
+        
+        self.magnitude = self.settings.map{ $0.magnitude }
+        self.range = self.settings.map{ $0.range }
+        self.magnitude_txt = self.settings.map{NSString(format: "Magnitud: %.1f Mw", $0.magnitude) as String }
+        self.range_txt = self.settings.map{NSString(format: "Rango: %.0fkm", $0.range) as String}
         self.areNotificationsOn = self.settings.map{$0.areNotificationsOn}
     }
     

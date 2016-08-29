@@ -10,18 +10,18 @@ import Foundation
 import SwiftyJSON
 
 struct Settings{
-    let magnitude: Double
-    let range: Double
+    let magnitude: Float
+    let range: Float
     let areNotificationsOn: Bool
     
     init?(json: JSON){
         
         guard let
-            magnitude = json["settings"]["magnitude"].double,
-            range = json["settings"]["range"].double,
+            magnitude = json["settings"]["magnitude"].float,
+            range = json["settings"]["range"].float,
             areNotificationsOn = json["settings"]["areNotificationsOn"].bool
-            else{
-                return nil
+        else{
+            return nil
         }
         
         self.magnitude = magnitude

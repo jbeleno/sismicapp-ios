@@ -44,8 +44,37 @@ class SettingsController: UIViewController {
     
     //MARK: - Lifecycle
     
+    private func addBindsToViewModel(viewModel: SettingsViewModel) {
+        
+        viewModel.magnitude_txt
+            .bindTo(lbl_magnitude.rx_text)
+            .addDisposableTo(disposeBag)
+        
+        viewModel.range_txt
+            .bindTo(lbl_range.rx_text)
+            .addDisposableTo(disposeBag)
+        
+        viewModel.magnitude
+            .bindTo(slider_magnitude.rx_value)
+            .addDisposableTo(disposeBag)
+        
+        viewModel.range
+            .bindTo(slider_range.rx_value)
+            .addDisposableTo(disposeBag)
+        
+        viewModel.areNotificationsOn
+            .bindTo(sw_notifications.rx_value)
+            .addDisposableTo(disposeBag)
+        
+    }
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Setting up the view model
+        viewModel = SettingsViewModel(sismicappService: SismicappAPIService())
+        addBindsToViewModel(viewModel)
         
         // On touch go to feedback view
         let gesture = UITapGestureRecognizer(target: self, action: #selector(SettingsController.goToFeedback(_:)))
