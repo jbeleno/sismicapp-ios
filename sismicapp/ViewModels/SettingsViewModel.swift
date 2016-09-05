@@ -58,9 +58,11 @@ final class SettingsViewModel {
     //MARK: - Public methods
     
     // Updating the settings
-    func updateSettings(withMagnitude magnitude: Double,
-                        withRange range: Double,
+    func updateSettings(withMagnitude magnitude: Float,
+                        withRange range: Float,
                         withAreNotificationsOn areNotificationsOn: Bool){
+        
+        print("UPDATE SETTINGS")
         
         let defaults = NSUserDefaults.standardUserDefaults()
         let token = defaults.stringForKey("deviceToken") ?? ""

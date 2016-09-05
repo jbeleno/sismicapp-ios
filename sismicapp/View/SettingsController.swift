@@ -36,11 +36,17 @@ class SettingsController: UIViewController {
     @IBAction func magnitudeChanged(sender: AnyObject) {
         self.lbl_magnitude.text = NSString(format: "Magnitud: %.1f Mw", self.slider_magnitude.value) as String
         
-        
+        updateSettings()
     }
     
     @IBAction func rangeChanged(sender: AnyObject) {
         self.lbl_range.text = NSString(format: "Rango: %.0fkm", self.slider_range.value) as String
+        
+        updateSettings()
+    }
+    
+    @IBAction func notificationsChanged(sender: AnyObject) {
+        updateSettings()
     }
     
     
@@ -68,6 +74,13 @@ class SettingsController: UIViewController {
             .bindTo(sw_notifications.rx_value)
             .addDisposableTo(disposeBag)
         
+    }
+    
+    private func updateSettings(){
+        // # Machetazo ~ Gambiarra
+        self.viewModel
+            .updateSettings(withMagnitude: self.slider_magnitude.value,
+                            withRange: self.slider_range.value, withAreNotificationsOn: self.sw_notifications.on)
     }
 
     
