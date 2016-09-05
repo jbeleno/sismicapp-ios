@@ -26,6 +26,11 @@ final class SettingsViewModel {
     let range_txt: Observable<String>
     let areNotificationsOn: Observable<Bool>
     
+    // Setting up the stream for updating the settings
+    
+    //var isSettingsUpdated: Variable<Bool>()
+    
+    
     //MARK: - Set up
     
     init(sismicappService: SismicappAPIService) {
@@ -49,4 +54,18 @@ final class SettingsViewModel {
         self.areNotificationsOn = self.settings.map{$0.areNotificationsOn}
     }
     
+    
+    //MARK: - Public methods
+    
+    // Updating the settings
+    func updateSettings(withMagnitude magnitude: Double,
+                        withRange range: Double,
+                        withAreNotificationsOn areNotificationsOn: Bool){
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let token = defaults.stringForKey("deviceToken") ?? ""
+        
+        sismicappService.updateSettings(withDevice: token, withMagnitude: magnitude, withRange: range, withAreNotificationsOn: areNotificationsOn)
+        
+    }
 }

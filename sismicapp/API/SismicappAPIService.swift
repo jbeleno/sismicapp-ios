@@ -361,7 +361,7 @@ class SismicappAPIService {
     func updateSettings( withDevice device_token: String,
                          withMagnitude magnitude: Double,
                                  withRange range: Double,
-                        withAreNotificationsOn areNotificationsOn: String) -> Observable<Bool> {
+                        withAreNotificationsOn areNotificationsOn: Bool) -> Observable<Bool> {
         
         let params: [String: AnyObject] = [
             "device_token": device_token,

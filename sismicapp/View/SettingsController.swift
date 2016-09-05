@@ -35,6 +35,8 @@ class SettingsController: UIViewController {
     
     @IBAction func magnitudeChanged(sender: AnyObject) {
         self.lbl_magnitude.text = NSString(format: "Magnitud: %.1f Mw", self.slider_magnitude.value) as String
+        
+        
     }
     
     @IBAction func rangeChanged(sender: AnyObject) {
