@@ -46,6 +46,7 @@
 		0DE18D8D1D26DCAF00EF39E2 /* PhoneNumbersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE18D8C1D26DCAF00EF39E2 /* PhoneNumbersCell.swift */; };
 		0DE18D901D26F34D00EF39E2 /* EmergencyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE18D8F1D26F34D00EF39E2 /* EmergencyService.swift */; };
 		0DE18D921D26F44300EF39E2 /* EmergencyServiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE18D911D26F44300EF39E2 /* EmergencyServiceViewModel.swift */; };
+		0DE18E1A1D83AD9200EB2129 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE18E191D83AD9200EB2129 /* ViewController.swift */; };
 		0DE34B4B1D36C92B00742793 /* SeismCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE34B4A1D36C92B00742793 /* SeismCell.swift */; };
 		0DE7278E1D3805B40006796D /* Seism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE7278D1D3805B40006796D /* Seism.swift */; };
 		0DE727901D3809BE0006796D /* SeismListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE7278F1D3809BE0006796D /* SeismListViewModel.swift */; };
@@ -120,6 +121,7 @@
 		0DE18D8C1D26DCAF00EF39E2 /* PhoneNumbersCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhoneNumbersCell.swift; path = View/Cells/PhoneNumbersCell.swift; sourceTree = "<group>"; };
 		0DE18D8F1D26F34D00EF39E2 /* EmergencyService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmergencyService.swift; path = Models/EmergencyService.swift; sourceTree = "<group>"; };
 		0DE18D911D26F44300EF39E2 /* EmergencyServiceViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmergencyServiceViewModel.swift; path = ViewModels/EmergencyServiceViewModel.swift; sourceTree = "<group>"; };
+		0DE18E191D83AD9200EB2129 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Helpers/ViewController.swift; sourceTree = "<group>"; };
 		0DE34B4A1D36C92B00742793 /* SeismCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SeismCell.swift; path = View/Cells/SeismCell.swift; sourceTree = "<group>"; };
 		0DE7278D1D3805B40006796D /* Seism.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Seism.swift; path = Models/Seism.swift; sourceTree = "<group>"; };
 		0DE7278F1D3809BE0006796D /* SeismListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SeismListViewModel.swift; path = ViewModels/SeismListViewModel.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 			children = (
 				0D249A4E1D2D814E00855178 /* DeviceInfo.swift */,
 				0D4A762E1D2B3CF300C32907 /* Text.swift */,
+				0DE18E191D83AD9200EB2129 /* ViewController.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -609,6 +612,7 @@
 				0D249A4F1D2D814E00855178 /* DeviceInfo.swift in Sources */,
 				0DDCBFF61D5257690073EB22 /* InformationViewModel.swift in Sources */,
 				0DE18D8D1D26DCAF00EF39E2 /* PhoneNumbersCell.swift in Sources */,
+				0DE18E1A1D83AD9200EB2129 /* ViewController.swift in Sources */,
 				0D7E6CDE1D73AE0400B1EDCD /* SettingsViewModel.swift in Sources */,
 				0DE18D831D26DA9C00EF39E2 /* HomeController.swift in Sources */,
 				0DE18D921D26F44300EF39E2 /* EmergencyServiceViewModel.swift in Sources */,
