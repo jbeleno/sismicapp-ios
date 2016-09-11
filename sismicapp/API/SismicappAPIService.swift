@@ -150,6 +150,42 @@ class SismicappAPIService {
     
     
     
+    // [START feedback_services]
+    
+    // Report a seism sending location and user information
+    func send_feedback(withDevice device_token: String,
+                                   withMsg msg: String,
+                         withLatitude latitude: Double,
+                       withLongitude longitude: Double,
+                                 withCity city: String,
+                             withRegion region: String,
+                           withCountry country: String) -> Observable<Bool>{
+        
+        let params: [String: AnyObject] = [
+            "device_token": device_token,
+            "msg": msg,
+            "latitude": latitude,
+            "longitude": longitude,
+            "city": city,
+            "region": region,
+            "country": country
+        ]
+        
+        return request(.POST, ResourcePath.FeedbackNew.path, parameters: params)
+            .rx_JSON()
+            .map(JSON.init)
+            .flatMap {
+                json -> Observable<Bool> in
+                let response_status = true
+                
+                return Observable.just(response_status)
+        }
+    }
+    
+    // [END feedback_services]
+    
+    
+    
     // [START information_services]
     
     // Get a information details
