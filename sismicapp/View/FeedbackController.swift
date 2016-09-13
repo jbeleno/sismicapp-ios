@@ -14,7 +14,10 @@ import RxCocoa
 class FeedbackController: UIViewController {
     
     //MARK: - Dependencies
+    private var viewModel: FeedbackViewModel!
+    private let disposeBag = DisposeBag()
     
+    var is_available: Bool = true
     
     
     //MARK: - Outlets

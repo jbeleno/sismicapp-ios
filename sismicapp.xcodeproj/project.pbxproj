@@ -17,6 +17,7 @@
 		0D341D6E1D4852B200CAAF58 /* NotificationUnreadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D341D6D1D4852B200CAAF58 /* NotificationUnreadCell.swift */; };
 		0D4A762F1D2B3CF300C32907 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4A762E1D2B3CF300C32907 /* Text.swift */; };
 		0D4A76311D2B3D8800C32907 /* UIViewController+presentError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4A76301D2B3D8800C32907 /* UIViewController+presentError.swift */; };
+		0D505D591D84EBCC00849C4F /* FeedbackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D505D581D84EBCC00849C4F /* FeedbackViewModel.swift */; };
 		0D56ACBA1D732DDF00BAD959 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D56ACB91D732DDF00BAD959 /* Settings.swift */; };
 		0D5D713A1CECD12F000125FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5D71391CECD12F000125FC /* AppDelegate.swift */; };
 		0D5D71411CECD12F000125FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D5D713F1CECD12F000125FC /* Main.storyboard */; };
@@ -86,6 +87,7 @@
 		0D341D6D1D4852B200CAAF58 /* NotificationUnreadCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotificationUnreadCell.swift; path = View/Cells/NotificationUnreadCell.swift; sourceTree = "<group>"; };
 		0D4A762E1D2B3CF300C32907 /* Text.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Text.swift; path = Helpers/Text.swift; sourceTree = "<group>"; };
 		0D4A76301D2B3D8800C32907 /* UIViewController+presentError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+presentError.swift"; path = "View/UIViewController+presentError.swift"; sourceTree = "<group>"; };
+		0D505D581D84EBCC00849C4F /* FeedbackViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedbackViewModel.swift; path = ViewModels/FeedbackViewModel.swift; sourceTree = "<group>"; };
 		0D56ACB91D732DDF00BAD959 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Settings.swift; path = Models/Settings.swift; sourceTree = "<group>"; };
 		0D5D71361CECD12E000125FC /* sismicapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sismicapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D5D71391CECD12F000125FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -280,6 +282,7 @@
 				0DE7278F1D3809BE0006796D /* SeismListViewModel.swift */,
 				0DD2FFC01D3C248F009CA346 /* ReportViewModel.swift */,
 				0D7E6CDD1D73AE0400B1EDCD /* SettingsViewModel.swift */,
+				0D505D581D84EBCC00849C4F /* FeedbackViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -616,6 +619,7 @@
 				0D7E6CDE1D73AE0400B1EDCD /* SettingsViewModel.swift in Sources */,
 				0DE18D831D26DA9C00EF39E2 /* HomeController.swift in Sources */,
 				0DE18D921D26F44300EF39E2 /* EmergencyServiceViewModel.swift in Sources */,
+				0D505D591D84EBCC00849C4F /* FeedbackViewModel.swift in Sources */,
 				0D341D681D4846C400CAAF58 /* Notification.swift in Sources */,
 				0D341D6E1D4852B200CAAF58 /* NotificationUnreadCell.swift in Sources */,
 				0D4A76311D2B3D8800C32907 /* UIViewController+presentError.swift in Sources */,
