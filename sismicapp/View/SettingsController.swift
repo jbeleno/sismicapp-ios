@@ -78,6 +78,8 @@ class SettingsController: UIViewController {
     
     private func updateSettings(){
         // # Machetazo ~ Gambiarra
+        // This code updates too fast and with every change, which means
+        // many request to my server
         self.viewModel
             .updateSettings(withMagnitude: self.slider_magnitude.value,
                             withRange: self.slider_range.value, withAreNotificationsOn: self.sw_notifications.on)

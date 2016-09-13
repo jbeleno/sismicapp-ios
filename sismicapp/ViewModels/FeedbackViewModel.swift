@@ -19,7 +19,7 @@ final class FeedbackViewModel {
     
     
     //MARK: - Model
-    
+    var txt_feedback = Variable<String>("")
     
     //MARK: - Set up
     
@@ -29,13 +29,20 @@ final class FeedbackViewModel {
         
         self.sismicappService = sismicappService
         self.ipInfoService = ipInfoService
+        
+        // let defaults = NSUserDefaults.standardUserDefaults()
+        // let token = defaults.stringForKey("deviceToken") ?? ""
+        
+
     }
-    
+
     
     //MARK: - Public methods
     
     // Send feedback
     func sendFeedback(withMsg msg: String){
+        
+        print("SEND FEEDBACK")
         
         let defaults = NSUserDefaults.standardUserDefaults()
         let token = defaults.stringForKey("deviceToken") ?? ""

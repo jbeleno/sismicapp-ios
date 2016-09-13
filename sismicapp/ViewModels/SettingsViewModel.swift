@@ -62,7 +62,6 @@ final class SettingsViewModel {
                         withRange range: Float,
                         withAreNotificationsOn areNotificationsOn: Bool){
         
-        print("UPDATE SETTINGS")
         
         let defaults = NSUserDefaults.standardUserDefaults()
         let token = defaults.stringForKey("deviceToken") ?? ""

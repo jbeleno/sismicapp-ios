@@ -630,7 +630,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F9C-rQ-yib">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="492"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XIL-hO-xHB">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
@@ -672,7 +672,17 @@
                             <constraint firstItem="XIL-hO-xHB" firstAttribute="height" secondItem="E3k-73-OZX" secondAttribute="height" priority="250" id="jsH-5z-x6b"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="ieA-rr-qhg">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ctS-Re-ddh">
+                            <connections>
+                                <action selector="sendFeedback:" destination="X5b-fY-83F" id="G6I-Tt-9o0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="btn_save" destination="ctS-Re-ddh" id="rG1-4G-gWl"/>
                         <outlet property="tv_feedback" destination="ea3-3b-brY" id="i1Y-JT-Ww5"/>
                     </connections>
                 </viewController>

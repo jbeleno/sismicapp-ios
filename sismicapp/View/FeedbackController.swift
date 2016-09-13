@@ -22,11 +22,55 @@ class FeedbackController: UIViewController {
     
     //MARK: - Outlets
     @IBOutlet weak var tv_feedback: UITextView!
+    @IBOutlet weak var btn_save: UIBarButtonItem!
+    
+    
+    //MARK: - Actions
+    
+    @IBAction func sendFeedback(sender: AnyObject) {
+        
+        print("Stage 0")
+        
+        // This is a hack and I'm  not proud about it :(
+        if(self.is_available){
+            self.is_available = false
+            
+            print("Stage 1")
+            
+            if( tv_feedback.text != "Escríbenos tus comentarios, quejas y recomendaciones..." &&
+                tv_feedback.text != ""){
+                
+                print("Stage 2")
+                
+                viewModel.sendFeedback(withMsg: tv_feedback.text)
+                
+                // Set a 2 seconds delay to enable the button
+                let time = dispatch_time(dispatch_time_t(DISPATCH_TIME_NOW), 2 * Int64(NSEC_PER_SEC))
+                dispatch_after(time, dispatch_get_main_queue()) {
+                    self.is_available = true
+                    self.tv_feedback.text = ""
+                    print("Stage 3")
+                }
+            }
+        }
+    }
 
     
     //MARK: - Lifecycle
+    
+    private func addBindsToViewModel(viewModel: FeedbackViewModel) {
+        //btn_save.rx_tap
+            //.map{ tv_feedback.rx_text }
+            //.bindTo(viewModel.txt_feedback)
+            //.addDisposableTo(disposeBag)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Setting up the view model
+        viewModel = FeedbackViewModel(sismicappService: SismicappAPIService(), ipInfoService: IpInfoAPIService())
+        addBindsToViewModel(viewModel)
         
         // On touch dismiss the keyboard
         self.hideKeyboardWhenTappedAround()
