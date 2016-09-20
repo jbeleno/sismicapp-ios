@@ -10,7 +10,7 @@ target 'sismicapp' do
     pod 'RxCocoa', '~> 2.6'
     pod 'RxBlocking', '~> 2.6'
     pod 'SwiftyJSON', '2.3.2'
-    pod 'Alamofire', '~> 3.4.1'
+    pod 'Alamofire', '~> 3.5.0' # This shit works with swift 2.3.
     pod 'RxAlamofire', '~> 2.5'
     pod 'Mapbox-iOS-SDK', '~> 3.2.2'
 end
