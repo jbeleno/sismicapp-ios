@@ -12,7 +12,7 @@ import RxCocoa
 import SwiftyJSON
 
 //MARK: - FeedbackController
-class FeedbackController: UIViewController {
+class FeedbackController: UIViewController, UITextViewDelegate {
     
     //MARK: - Dependencies
     private var viewModel: FeedbackViewModel!
@@ -68,8 +68,23 @@ class FeedbackController: UIViewController {
         self.tv_feedback.layer.borderColor = UIColor.init(colorLiteralRed: 239.0/255.0, green: 239.0/255.0, blue: 239.0/255.0, alpha: 1.0).CGColor
         self.tv_feedback.layer.borderWidth = 1.0
 
+        // Setting the delegate 
+        self.tv_feedback.delegate = self
         
-        
+    }
+    
+    // Simulating the placeholder behavior
+    
+    func textViewDidBeginEditing(textView: UITextView) {
+        if (textView.text == "Escríbenos tus comentarios, quejas y recomendaciones..."){
+            textView.text = ""
+        }
+    }
+    
+    func textViewDidEndEditing(textView: UITextView) {
+        if (textView.text == ""){
+            textView.text = "Escríbenos tus comentarios, quejas y recomendaciones..."
+        }
     }
     
 }
