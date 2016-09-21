@@ -611,12 +611,23 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4X-IP-f8K">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="Zru-su-JZt"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="ea3-3b-brY" firstAttribute="leading" secondItem="XIL-hO-xHB" secondAttribute="leading" constant="16" id="0Ae-4H-lba"/>
                                             <constraint firstAttribute="trailing" secondItem="ea3-3b-brY" secondAttribute="trailing" constant="16" id="7wm-8k-tSl"/>
                                             <constraint firstItem="ea3-3b-brY" firstAttribute="top" secondItem="XIL-hO-xHB" secondAttribute="top" constant="24" id="aBn-i5-jV6"/>
+                                            <constraint firstAttribute="trailing" secondItem="d4X-IP-f8K" secondAttribute="trailing" constant="16" id="eX8-5l-M70"/>
+                                            <constraint firstItem="d4X-IP-f8K" firstAttribute="top" secondItem="ea3-3b-brY" secondAttribute="bottom" constant="16" id="gtv-ZM-Boy"/>
+                                            <constraint firstItem="d4X-IP-f8K" firstAttribute="leading" secondItem="XIL-hO-xHB" secondAttribute="leading" constant="16" id="mao-ek-pyO"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -640,21 +651,18 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="ieA-rr-qhg">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ctS-Re-ddh">
-                            <connections>
-                                <action selector="sendFeedback:" destination="X5b-fY-83F" id="G6I-Tt-9o0"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ctS-Re-ddh"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="btn_save" destination="ctS-Re-ddh" id="rG1-4G-gWl"/>
+                        <outlet property="lbl_thanks" destination="d4X-IP-f8K" id="zJg-ar-lIH"/>
                         <outlet property="tv_feedback" destination="ea3-3b-brY" id="i1Y-JT-Ww5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="32n-Cy-eiU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1215" y="2126"/>
+            <point key="canvasLocation" x="1213.5999999999999" y="2125.1874062968518"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5qz-z3-vhC">

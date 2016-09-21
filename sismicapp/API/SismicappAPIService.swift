@@ -171,6 +171,8 @@ class SismicappAPIService {
             "country": country
         ]
         
+        print(params)
+        
         return request(.POST, ResourcePath.FeedbackNew.path, parameters: params)
             .rx_JSON()
             .map(JSON.init)

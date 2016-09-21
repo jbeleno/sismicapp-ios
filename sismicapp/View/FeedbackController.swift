@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import SwiftyJSON
 
 //MARK: - FeedbackController
 class FeedbackController: UIViewController {
@@ -23,46 +24,32 @@ class FeedbackController: UIViewController {
     //MARK: - Outlets
     @IBOutlet weak var tv_feedback: UITextView!
     @IBOutlet weak var btn_save: UIBarButtonItem!
+    @IBOutlet weak var lbl_thanks: UILabel!
     
-    
-    //MARK: - Actions
-    
-    @IBAction func sendFeedback(sender: AnyObject) {
-        
-        print("Stage 0")
-        
-        // This is a hack and I'm  not proud about it :(
-        if(self.is_available){
-            self.is_available = false
-            
-            print("Stage 1")
-            
-            if( tv_feedback.text != "Escríbenos tus comentarios, quejas y recomendaciones..." &&
-                tv_feedback.text != ""){
-                
-                print("Stage 2")
-                
-                viewModel.sendFeedback(withMsg: tv_feedback.text)
-                
-                // Set a 2 seconds delay to enable the button
-                let time = dispatch_time(dispatch_time_t(DISPATCH_TIME_NOW), 2 * Int64(NSEC_PER_SEC))
-                dispatch_after(time, dispatch_get_main_queue()) {
-                    self.is_available = true
-                    self.tv_feedback.text = ""
-                    print("Stage 3")
-                }
-            }
-        }
-    }
-
     
     //MARK: - Lifecycle
     
     private func addBindsToViewModel(viewModel: FeedbackViewModel) {
-        //btn_save.rx_tap
-            //.map{ tv_feedback.rx_text }
-            //.bindTo(viewModel.txt_feedback)
-            //.addDisposableTo(disposeBag)
+        
+        // This is a Gambiarra ~ Machetazo, however this is a 
+        // more elegant solution for this problem
+        btn_save.rx_tap
+            .flatMapLatest{ tap -> Observable<DeviceLocation> in
+                return viewModel.getLocation()
+            }
+            .observeOn(MainScheduler.instance)
+            .subscribeNext { location in
+                
+                // Parses the location and sends the feedback
+                viewModel.sendFeedback(withMsg: self.tv_feedback.text, withLatitude: location.latitude, withLongitude: location.longitude, withCity: location.city, withRegion: location.region, withCountry: location.country)
+                
+                // Change the TextView and the Label
+                self.tv_feedback.text = ""
+                self.lbl_thanks.text = "¡Gracias por tus comentarios!"
+            }
+            .addDisposableTo(disposeBag)
+        
+    
     }
     
     override func viewDidLoad() {
