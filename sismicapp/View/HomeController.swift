@@ -25,12 +25,33 @@ class HomeController: UIViewController {
     private var seism_identifier = ""
     private let segue_identifier = "home_seism_segue"
     
+    private var refresh_control = UIRefreshControl()
+    private let refresh_control_text = "Desliza hacia abajo para refrescar..."
+    
     //MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
     
     //MARK: - Lifecycle
     
     private func addBindsToViewModel(viewModel: SeismListViewModel) {
+        
+        // This is a Gambiarra ~ Machetazo, however this is a
+        // more elegant solution for this problem
+        refresh_control.rx_controlEvent(.ValueChanged)
+            .flatMapLatest{ is_refreshing -> Observable<DeviceLocation> in
+                return viewModel.getLocation()
+            }
+            .observeOn(MainScheduler.instance)
+            .subscribeNext { location in
+                
+                // Parses the location and sends the feedback
+                viewModel.reloadSeismList(withLatitude: location.latitude, withLongitude: location.longitude, withCity: location.city, withRegion: location.region, withCountry: location.country)
+                
+                // Change the refresh control status
+                self.refresh_control.endRefreshing()
+            }
+            .addDisposableTo(disposeBag)
+        
         viewModel.cellData
             .bindTo(tableView.rx_itemsWithDataSource(self))
             .addDisposableTo(disposeBag)
@@ -46,14 +67,18 @@ class HomeController: UIViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 52.0
         
-        self.viewModel = SeismListViewModel(sismicappService: SismicappAPIService())
+        // Setup the refresh action
+        self.refresh_control.attributedTitle = NSAttributedString(string: refresh_control_text)
+        self.tableView.addSubview(self.refresh_control)
+        
+        self.viewModel = SeismListViewModel(sismicappService: SismicappAPIService(), ipInfoService: IpInfoAPIService())
         addBindsToViewModel(viewModel)
     }
     
     
     //MARK: - TableViewData
     
-    //The data to update the tableView with. These is a better way to update the
+    //The data to update the tableView with. There is a better way to update the
     //tableView with RxSwift, please see
     //https://github.com/ReactiveX/RxSwift/tree/master/RxExample
     //However this implementation is much simpler

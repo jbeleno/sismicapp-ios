@@ -13,23 +13,26 @@ final class SeismListViewModel {
     //MARK: - Dependecies
     
     private let sismicappService: SismicappAPIService
+    private let ipInfoService: IpInfoAPIService
     private let disposeBag = DisposeBag()
     
     
     //MARK: - Model
     
-    private let seism_list: Observable<SeismList>
+    private var seism_list: Observable<SeismList>
     
-    let cellData: Observable<[SeismListItem]>
+    var cellData: Observable<[SeismListItem]>
     
     
     //MARK: - Set up
     
-    init(sismicappService: SismicappAPIService) {
+    init(sismicappService: SismicappAPIService, ipInfoService: IpInfoAPIService) {
         
         //Initialise dependencies
         
         self.sismicappService = sismicappService
+        self.ipInfoService = ipInfoService
+        
         
         let defaults = NSUserDefaults.standardUserDefaults()
         let token = defaults.stringForKey("deviceToken") ?? ""
@@ -38,8 +41,41 @@ final class SeismListViewModel {
                               .all_seisms(withDevice: token)
                               .retry(3)
                               .shareReplay(1)
-        self.cellData = self.seism_list.map{$0.list}
         
+        print("************************************ RELOAD SEISM LIST *************************************")
+        
+        self.cellData = self.seism_list.map{print("Sismo:"+$0.list[0].epicenter); return $0.list}
+        
+    }
+    
+    //MARK: - Public methods
+    
+    // Send feedback
+    func reloadSeismList(        withLatitude latitude: Double,
+                               withLongitude longitude: Double,
+                                         withCity city: String,
+                                     withRegion region: String,
+                                   withCountry country: String){
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let token = defaults.stringForKey("deviceToken") ?? ""
+        
+        
+        sismicappService.registerSession(withDevice: token, withLatitude: latitude,
+                                         withLongitude: longitude, withCity: city, withRegion: region,
+                                         withCountry: country)
+        print("************************************ RELOAD SEISM LIST *************************************")
+        self.seism_list = self.sismicappService
+                            .all_seisms(withDevice: token)
+                            .retry(3)
+        
+        self.cellData = self.seism_list
+                            .map{print("Sismo:"+$0.list[0].epicenter); return $0.list}
+    }
+    
+    // Get location
+    func getLocation() -> Observable<DeviceLocation>{
+        return ipInfoService.getLocation()
     }
 
 }
