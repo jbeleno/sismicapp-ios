@@ -42,9 +42,7 @@ final class SeismListViewModel {
                               .retry(3)
                               .shareReplay(1)
         
-        print("************************************ RELOAD SEISM LIST *************************************")
-        
-        self.cellData = self.seism_list.map{print("Sismo:"+$0.list[0].epicenter); return $0.list}
+        self.cellData = self.seism_list.map{return $0.list}
         
     }
     
@@ -55,22 +53,23 @@ final class SeismListViewModel {
                                withLongitude longitude: Double,
                                          withCity city: String,
                                      withRegion region: String,
-                                   withCountry country: String){
+                                   withCountry country: String)-> Observable<[SeismListItem]>{
         
         let defaults = NSUserDefaults.standardUserDefaults()
         let token = defaults.stringForKey("deviceToken") ?? ""
         
-        
         sismicappService.registerSession(withDevice: token, withLatitude: latitude,
                                          withLongitude: longitude, withCity: city, withRegion: region,
                                          withCountry: country)
-        print("************************************ RELOAD SEISM LIST *************************************")
+        
         self.seism_list = self.sismicappService
                             .all_seisms(withDevice: token)
                             .retry(3)
         
         self.cellData = self.seism_list
-                            .map{print("Sismo:"+$0.list[0].epicenter); return $0.list}
+                            .map{return $0.list}
+        
+        return self.cellData
     }
     
     // Get location

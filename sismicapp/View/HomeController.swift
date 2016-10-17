@@ -35,26 +35,39 @@ class HomeController: UIViewController {
     
     private func addBindsToViewModel(viewModel: SeismListViewModel) {
         
-        // This is a Gambiarra ~ Machetazo, however this is a
-        // more elegant solution for this problem
-        refresh_control.rx_controlEvent(.ValueChanged)
-            .flatMapLatest{ is_refreshing -> Observable<DeviceLocation> in
+        // This seems to be the 'proper' solution to load seismic data
+        // in the table and stop the animation from the refresh control
+        
+        let initial = Observable<Void>.just(())
+        let refresh = self.refresh_control.rx_controlEvent(.ValueChanged).map { _ in () }
+        
+        // Gets the location
+        let loc = Observable.of(initial, refresh)
+            .merge()
+            .flatMapLatest{ _ in
                 return viewModel.getLocation()
             }
-            .observeOn(MainScheduler.instance)
-            .subscribeNext { location in
-                
-                // Parses the location and sends the feedback
-                viewModel.reloadSeismList(withLatitude: location.latitude, withLongitude: location.longitude, withCity: location.city, withRegion: location.region, withCountry: location.country)
-                
-                // Change the refresh control status
-                self.refresh_control.endRefreshing()
-            }
-            .addDisposableTo(disposeBag)
+            .shareReplayLatestWhileConnected()
         
-        viewModel.cellData
+        // Parses the location, sends the feedback, and load the seismic data
+        let seismList = loc.flatMapLatest{ location in
+                                viewModel.reloadSeismList(withLatitude: location.latitude, withLongitude: location.longitude, withCity: location.city, withRegion: location.region, withCountry: location.country)
+                            }
+                            .shareReplayLatestWhileConnected()
+        
+       
+        // Binds the results to the tableView
+        seismList
             .bindTo(tableView.rx_itemsWithDataSource(self))
             .addDisposableTo(disposeBag)
+        
+        // Binds the results to the refresh control, but there is a problem when
+        // seismList does not load, because it keeps in an infity loop 'loading'
+        seismList
+            .map { _ in false }
+            .bindTo(self.refresh_control.rx_refreshing)
+            .addDisposableTo(disposeBag)
+        
     }
     
     override func viewDidLoad() {
