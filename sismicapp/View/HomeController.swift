@@ -38,35 +38,22 @@ class HomeController: UIViewController {
         // This seems to be the 'proper' solution to load seismic data
         // in the table and stop the animation from the refresh control
         
-        let initial = Observable<Void>.just(())
-        let refresh = self.refresh_control.rx_controlEvent(.ValueChanged).map { _ in () }
+        self.refresh_control.rx_controlEvent(.ValueChanged)
+            .map { _ in true }
+            .bindTo(viewModel.is_loading)
+            .addDisposableTo(disposeBag)
         
-        // Gets the location
-        let loc = Observable.of(initial, refresh)
-            .merge()
-            .flatMapLatest{ _ in
-                return viewModel.getLocation()
-            }
-            .shareReplayLatestWhileConnected()
-        
-        // Parses the location, sends the feedback, and load the seismic data
-        let seismList = loc.flatMapLatest{ location in
-                                viewModel.reloadSeismList(withLatitude: location.latitude, withLongitude: location.longitude, withCity: location.city, withRegion: location.region, withCountry: location.country)
-                            }
-                            .shareReplayLatestWhileConnected()
-        
-       
-        // Binds the results to the tableView
-        seismList
+        viewModel.cellData
             .bindTo(tableView.rx_itemsWithDataSource(self))
             .addDisposableTo(disposeBag)
         
-        // Binds the results to the refresh control, but there is a problem when
-        // seismList does not load, because it keeps in an infity loop 'loading'
-        seismList
-            .map { _ in false }
+        viewModel.hasStoped
+            .asObservable()
+            .map{_ in false}
             .bindTo(self.refresh_control.rx_refreshing)
             .addDisposableTo(disposeBag)
+        
+        
         
     }
     
@@ -97,6 +84,7 @@ class HomeController: UIViewController {
     //However this implementation is much simpler
     private var tableViewData: [SeismListItem]? {
         didSet {
+            print("Item Load")
             tableView.reloadData()
         }
     }

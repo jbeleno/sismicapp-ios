@@ -21,7 +21,13 @@ final class SeismListViewModel {
     
     private var seism_list: Observable<SeismList>
     
-    var cellData: Observable<[SeismListItem]>
+    var cellData: Observable<[SeismListItem]>{
+        return seism_list.map{return $0.list}
+    }
+    
+    // Setting up the click stream
+    var is_loading = Variable<Bool>(true)
+    var hasStoped = Variable<Bool>(false)
     
     
     //MARK: - Set up
@@ -33,48 +39,54 @@ final class SeismListViewModel {
         self.sismicappService = sismicappService
         self.ipInfoService = ipInfoService
         
-        
         let defaults = NSUserDefaults.standardUserDefaults()
         let token = defaults.stringForKey("deviceToken") ?? ""
         
         self.seism_list = self.sismicappService
-                              .all_seisms(withDevice: token)
-                              .retry(3)
-                              .shareReplay(1)
+            .all_seisms(withDevice: token)
         
-        self.cellData = self.seism_list.map{return $0.list}
         
-    }
-    
-    //MARK: - Public methods
-    
-    // Send feedback
-    func reloadSeismList(        withLatitude latitude: Double,
-                               withLongitude longitude: Double,
-                                         withCity city: String,
-                                     withRegion region: String,
-                                   withCountry country: String)-> Observable<[SeismListItem]>{
+        let location = is_loading.asObservable()
+                            .flatMapLatest{ reload -> Observable<DeviceLocation> in
+                                self.hasStoped.value = true
+                                return ipInfoService.getLocation()
+                            }
+                            .catchError{error in
+                                self.hasStoped.value = false
+                                return Observable.error(error)
+                            }
+                            .shareReplay(1)
         
-        let defaults = NSUserDefaults.standardUserDefaults()
-        let token = defaults.stringForKey("deviceToken") ?? ""
+        let sess_updated = location
+                            .flatMapLatest{ loc -> Observable<Bool> in
+                                let latitude = loc.latitude
+                                let longitude = loc.longitude
+                                let city = loc.city
+                                let region = loc.region
+                                let country = loc.country
+                                
+                                return sismicappService.registerSession(withDevice: token, withLatitude: latitude,
+                                    withLongitude: longitude, withCity: city, withRegion: region,
+                                    withCountry: country)
+                            }
+                            .catchError{error in
+                                self.hasStoped.value = false
+                                return Observable.error(error)
+                            }
+                            .shareReplay(1)
         
-        sismicappService.registerSession(withDevice: token, withLatitude: latitude,
-                                         withLongitude: longitude, withCity: city, withRegion: region,
-                                         withCountry: country)
         
-        self.seism_list = self.sismicappService
-                            .all_seisms(withDevice: token)
-                            .retry(3)
+        self.seism_list = sess_updated
+                            .flatMapLatest{session_updated -> Observable<SeismList> in
+                                return self.sismicappService
+                                           .all_seisms(withDevice: token)
+                            }
+                            .catchError{error in
+                                self.hasStoped.value = false
+                                return Observable.error(error)
+                            }
+                            .shareReplay(1)
         
-        self.cellData = self.seism_list
-                            .map{return $0.list}
-        
-        return self.cellData
-    }
-    
-    // Get location
-    func getLocation() -> Observable<DeviceLocation>{
-        return ipInfoService.getLocation()
     }
 
 }
